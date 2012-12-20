@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>EHRES-PC</Machine>
+    <WindowsUser>Maxime</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\VoilaMonAvis%28FromScratch%29.exe">
+      <PackagePath>VoilaMonAvis%28FromScratch%29.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\VoilaMonAvis%28FromScratch%29.pdb">
+      <PackagePath>VoilaMonAvis%28FromScratch%29.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\DataAccessLayer\bin\Debug\DataAccessLayer.pdb">
+      <PackagePath>DataAccessLayer.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\DataModel\bin\Debug\DataModel.pdb">
+      <PackagePath>DataModel.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\DataAccessLayer\bin\Debug\DataAccessLayer.dll">
+      <PackagePath>DataAccessLayer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\DataModel\bin\Debug\DataModel.dll">
+      <PackagePath>DataModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\CategoriyPages.xaml">
+      <PackagePath>CategoriyPages.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\PostsPage.xaml">
+      <PackagePath>PostsPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis%28FromScratch%29\VoilaMonAvis%28FromScratch%29\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
