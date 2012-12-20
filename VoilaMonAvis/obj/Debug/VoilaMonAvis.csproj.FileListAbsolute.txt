@@ -35,3 +35,36 @@ E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\
 E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\pri.resfiles
 E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\LanguageQualifiers.txt
 E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\ProjectArchitectures.txt
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis(FromScratch).exe
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis(FromScratch).pdb
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.build.appxrecipe
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\Newtonsoft.Json.dll
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\Newtonsoft.Json.xml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis.csprojResolveAssemblyReference.cache
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\App.g.i.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\App.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\Common\StandardStyles.g.i.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\Common\StandardStyles.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupDetailPage.g.i.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupDetailPage.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupedItemsPage.g.i.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupedItemsPage.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\ItemDetailPage.g.i.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\ItemDetailPage.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\XamlTypeInfo.g.cs
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\App.xaml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\Common\StandardStyles.xaml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupDetailPage.xaml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupedItemsPage.xaml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\ItemDetailPage.xaml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis(FromScratch).exe
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis(FromScratch).pdb
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis.csproj.GenerateResource.Cache
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\priconfig.xml
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\layout.resfiles
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\resources.resfiles
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\pri.resfiles
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\LanguageQualifiers.txt
+Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\obj\Debug\ProjectArchitectures.txt

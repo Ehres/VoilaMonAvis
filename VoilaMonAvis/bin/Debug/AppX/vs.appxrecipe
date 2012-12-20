@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>EHRES</Machine>
-    <WindowsUser>Maxime</WindowsUser>
+    <Machine>WIN-2TB0D36AHBT</Machine>
+    <WindowsUser>Maxime Grébauval</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <RegisteredManifestChecksum>AC3C368AF97AE67B40A0EACB17A8A185BB86D927C7A5BC3C3372E79AE9251FEA</RegisteredManifestChecksum>
@@ -13,76 +13,76 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-14T11:30:21.990</Modified>
+      <Modified>2012-12-20T21:49:01.000</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.exe">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.exe">
       <PackagePath>VoilaMonAvis%28FromScratch%29.exe</PackagePath>
-      <Modified>2012-12-14T16:11:58.823</Modified>
+      <Modified>2012-12-20T21:48:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.pdb">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.pdb">
       <PackagePath>VoilaMonAvis%28FromScratch%29.pdb</PackagePath>
-      <Modified>2012-12-14T16:11:58.796</Modified>
+      <Modified>2012-12-20T21:48:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2012-12-03T22:09:03.474</Modified>
+      <Modified>2012-12-20T04:12:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
-      <Modified>2012-12-03T22:09:03.487</Modified>
+      <Modified>2012-12-20T04:12:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\Assets\Logo.png">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-06-06T01:18:14.000</Modified>
+      <Modified>2012-12-20T04:04:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-06-06T01:18:14.000</Modified>
+      <Modified>2012-12-20T04:04:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-06-06T01:18:14.000</Modified>
+      <Modified>2012-12-20T04:04:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-06-06T01:18:14.000</Modified>
+      <Modified>2012-12-20T04:04:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
-      <Modified>2012-12-12T21:28:21.171</Modified>
+      <Modified>2012-12-20T04:05:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-12-14T13:21:19.563</Modified>
+      <Modified>2012-12-20T04:01:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-12-14T13:45:03.009</Modified>
+      <Modified>2012-12-20T04:05:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
-      <Modified>2012-12-14T14:07:52.546</Modified>
+      <Modified>2012-12-20T04:01:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
-      <Modified>2012-12-14T13:21:38.748</Modified>
+      <Modified>2012-12-20T04:01:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
-      <Modified>2012-12-14T14:20:08.618</Modified>
+      <Modified>2012-12-20T04:01:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\SkyDrive\Projects\Visual Studio\projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-12-14T11:30:21.241</Modified>
+      <Modified>2012-12-20T21:49:00.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
