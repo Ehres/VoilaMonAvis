@@ -34,16 +34,11 @@ namespace VoilaMonAvis.Data
         public int Comment_Count { get; set; }
         public string Post_Url { get; set; }
         public List<Category> Post_Categories { get; set; }
-        public BitmapImage Post_Image_Thumbnail { get; set; }
-        public BitmapImage Post_Image_Medium { get; set; }
-        public BitmapImage Post_Image_Large { get; set; }
-        public BitmapImage Post_Image_Full { get; set; }
         public string Post_Image_Full_Url { get; set; }
 
         public Posts(string json)
         {
             JObject jObject = JObject.Parse(json);
-            //JToken jPost = jObject["posts"];
             ID = (int)jObject["id"];
             Post_Type = (string)jObject["type"];
             Post_Url = (string)jObject["url"];
@@ -60,7 +55,6 @@ namespace VoilaMonAvis.Data
             Post_Categories = new List<Category>();
             JToken jTokencategories = jObject["categories"];
 
-            //JObject o = JObject.Parse(jTokencategories.ToString());
             foreach (var categoryJson in jTokencategories)
             {
                 Category category = new Category(categoryJson.ToString());
@@ -73,7 +67,6 @@ namespace VoilaMonAvis.Data
                 JObject jObjectAttachmentJson = (JObject)(attachmentJson);
                 JObject jObjectImages = (JObject)jObjectAttachmentJson["images"];
                 JToken jObjectImageFull = jObjectImages["full"];
-                //Post_Image_Full = new BitmapImage((Uri)jObjectImageFull["url"]);
                 Post_Image_Full_Url = jObjectImageFull["url"].ToString();
             }
         }
