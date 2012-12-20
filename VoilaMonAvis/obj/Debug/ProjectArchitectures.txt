@@ -1,1 +1,1 @@
-Z:\Documents\Visual Studio 2012\Projects\VoilaMonAvis\VoilaMonAvis\VoilaMonAvis.csproj;neutral
+C:\project\VMA\VoilaMonAvis\VoilaMonAvis\VoilaMonAvis.csproj;neutral

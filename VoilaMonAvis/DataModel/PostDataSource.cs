@@ -33,7 +33,12 @@ namespace VoilaMonAvis.Data
         public string Post_Mime_Type { get; set; }
         public int Comment_Count { get; set; }
         public string Post_Url { get; set; }
-        public List<Category> Post_Categories { get; set; }       
+        public List<Category> Post_Categories { get; set; }
+        public BitmapImage Post_Image_Thumbnail { get; set; }
+        public BitmapImage Post_Image_Medium { get; set; }
+        public BitmapImage Post_Image_Large { get; set; }
+        public BitmapImage Post_Image_Full { get; set; }
+        public string Post_Image_Full_Url { get; set; }
 
         public Posts(string json)
         {
@@ -50,7 +55,7 @@ namespace VoilaMonAvis.Data
             Post_Status = (string)jObject["status"];
             Post_Excerpt = (string)jObject["excerpt"];
             Post_Date = (DateTime)jObject["date"];
-            Post_Modified = (DateTime)jObject["modified"];
+            Post_Modified = (DateTime)jObject["modified"];          
 
             Post_Categories = new List<Category>();
             JToken jTokencategories = jObject["categories"];
@@ -60,6 +65,16 @@ namespace VoilaMonAvis.Data
             {
                 Category category = new Category(categoryJson.ToString());
                 Post_Categories.Add(category);
+            }
+
+            JToken jTokenAttachments = jObject["attachments"];
+            foreach (var attachmentJson in jTokenAttachments)
+            {
+                JObject jObjectAttachmentJson = (JObject)(attachmentJson);
+                JObject jObjectImages = (JObject)jObjectAttachmentJson["images"];
+                JToken jObjectImageFull = jObjectImages["full"];
+                //Post_Image_Full = new BitmapImage((Uri)jObjectImageFull["url"]);
+                Post_Image_Full_Url = jObjectImageFull["url"].ToString();
             }
         }
 
@@ -319,7 +334,7 @@ namespace VoilaMonAvis.Data
                 groupRecentPost.Items.Add(new PostDataItem("Derniers articles" + "-Item-" + post.ID,
                     title,
                     "",
-                    "",
+                    post.Post_Image_Full_Url,
                     "",
                     content,
                     groupRecentPost));
@@ -346,7 +361,7 @@ namespace VoilaMonAvis.Data
                     group.Items.Add(new PostDataItem(category.Category_Id.ToString() + "-Item-" + post.ID,
                         title,
                         "",
-                        "",
+                        post.Post_Image_Full_Url,
                         "",
                         content,
                         group));
