@@ -15,7 +15,6 @@ namespace VoilaMonAvis_FromScratch_.DataModel
         public DateTime Post_Date { get; set; }
         public DateTime Post_Date_GMT { get; set; }
         public string Post_Content { get; set; }
-        public string Post_Content_Next { get; set; }
         public string Post_Title { get; set; }
         public string Post_Excerpt { get; set; }
         public string Post_Status { get; set; }
@@ -40,7 +39,6 @@ namespace VoilaMonAvis_FromScratch_.DataModel
             Post_Status = (string)jObject["status"];
             Post_Title = (string)jObject["title"];
             Post_Content = (string)jObject["content"];
-            Post_Content_Next = "";
 
             Post_Author = new Users(jObject["author"].ToString());
             Post_Url = (string)jObject["url"];
@@ -94,11 +92,11 @@ namespace VoilaMonAvis_FromScratch_.DataModel
                         content = iframe.Substring(indexSrc + 6);
                         int indexOfEndLink = content.IndexOf("\"");
                         Post_Video_Url = new Uri(content.Substring(0, indexOfEndLink));
-                        Post_Content_Next = Post_Content.Substring(Post_Content.IndexOf(content) + indexOfEndLink);
-                        int endOfIframeMovie = Post_Content_Next.IndexOf("</iframe>") + 9;
-                        Post_Content_Next = Post_Content_Next.Substring(endOfIframeMovie);
+                        //Post_Content_Next = Post_Content.Substring(Post_Content.IndexOf(content) + indexOfEndLink);
+                        //int endOfIframeMovie = Post_Content_Next.IndexOf("</iframe>") + 9;
+                        //Post_Content_Next = Post_Content_Next.Substring(endOfIframeMovie);
 
-                        Post_Content = Post_Content.Substring(0, Post_Content.Length - 13);
+                        //Post_Content = Post_Content.Substring(0, Post_Content.Length - 13);
 
                         drapForSearchVideo = false;
                     }

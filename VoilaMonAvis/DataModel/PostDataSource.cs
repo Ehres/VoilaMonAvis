@@ -82,7 +82,7 @@ namespace VoilaMonAvis.Data
     /// </summary>
     public class PostDataItem : PostDataCommon
     {
-        public PostDataItem(String uniqueId, String title, String imagePath, String content, String contentNext, PostDataGroup group, Uri videoPath, int page)
+        public PostDataItem(String uniqueId, String title, String imagePath, String content, PostDataGroup group, Uri videoPath, int page)
             : base(uniqueId, title, imagePath)
         {
             this.Content = content;
@@ -253,14 +253,12 @@ namespace VoilaMonAvis.Data
                 foreach (Posts post in recentPosts)
                 {
                     string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
-                    string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
                     string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
 
                     groupRecentPost.Items.Add(new PostDataItem("Derniers articles" + "-Item-" + post.ID,
                         title,
                         post.Post_Image_Full_Url,
                         content,
-                        contentNext,
                         groupRecentPost,
                         post.Post_Video_Url,
                         1));
@@ -286,13 +284,12 @@ namespace VoilaMonAvis.Data
                     foreach (Posts post in posts)
                     {
                         string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
-                        string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
+                        //string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
                         string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
                         group.Items.Add(new PostDataItem(category.Category_Id.ToString() + "-Item-" + post.ID,
                             title,
                             post.Post_Image_Full_Url,
                             content,
-                            contentNext,
                             group,
                             post.Post_Video_Url,
                             1));
@@ -328,13 +325,12 @@ namespace VoilaMonAvis.Data
                         foreach (Posts post in morePost)
                         {
                             string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
-                            string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
+                            //string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
                             string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
                             group.Items.Add(new PostDataItem(uniqueId + "-Item-" + post.ID,
                                 title,
                                 post.Post_Image_Full_Url,
                                 content,
-                                contentNext,
                                 group,
                                 post.Post_Video_Url,
                                 pageToLoad));
