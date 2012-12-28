@@ -38,9 +38,8 @@ namespace VoilaMonAvis_FromScratch_
         /// antérieure. Null lors de la première visite de la page.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            // TODO: assignez une collection de groupes pouvant être liés à this.DefaultViewModel["Groups"]
             var postDataGroups = PostDataSource.GetGroups((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = postDataGroups;
+            this.DefaultViewModel["Groups"] = postDataGroups;                        
         }
 
         void Header_Click(object sender, RoutedEventArgs e)

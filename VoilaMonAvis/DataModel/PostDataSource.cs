@@ -10,81 +10,21 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VoilaMonAvis;
 using VoilaMonAvis.DataAccessLayer;
+using VoilaMonAvis_FromScratch_.DataModel;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace VoilaMonAvis.Data
 {
-    public class Posts
-    {
-        public int ID { get; set; }
-        public Users Post_Author { get; set; }
-        public DateTime Post_Date { get; set; }
-        public DateTime Post_Date_GMT { get; set; }
-        public string Post_Content { get; set; }
-        public string Post_Title { get; set; }
-        public string Post_Excerpt { get; set; }
-        public string Post_Status { get; set; }
-        public string Comment_Status { get; set; }
-        public string Ping_Status { get; set; }
-        public string Post_Password { get; set; }
-        public DateTime Post_Modified { get; set; }
-        public string Post_Type { get; set; }
-        public string Post_Mime_Type { get; set; }
-        public int Comment_Count { get; set; }
-        public string Post_Url { get; set; }
-        public List<Category> Post_Categories { get; set; }
-        public string Post_Image_Full_Url { get; set; }
-
-        public Posts(string json)
-        {
-            JObject jObject = JObject.Parse(json);
-            ID = (int)jObject["id"];
-            Post_Type = (string)jObject["type"];
-            Post_Url = (string)jObject["url"];
-            Post_Status = (string)jObject["status"];
-            Post_Title = (string)jObject["title"];
-            Post_Content = (string)jObject["content"];
-            Post_Author = new Users(jObject["author"].ToString());
-            Post_Url = (string)jObject["url"];
-            Post_Status = (string)jObject["status"];
-            Post_Excerpt = (string)jObject["excerpt"];
-            Post_Date = (DateTime)jObject["date"];
-            Post_Modified = (DateTime)jObject["modified"];          
-
-            Post_Categories = new List<Category>();
-            JToken jTokencategories = jObject["categories"];
-
-            foreach (var categoryJson in jTokencategories)
-            {
-                Category category = new Category(categoryJson.ToString());
-                Post_Categories.Add(category);
-            }
-
-            JToken jTokenAttachments = jObject["attachments"];
-            foreach (var attachmentJson in jTokenAttachments)
-            {
-                JObject jObjectAttachmentJson = (JObject)(attachmentJson);
-                JObject jObjectImages = (JObject)jObjectAttachmentJson["images"];
-                JToken jObjectImageFull = jObjectImages["full"];
-                Post_Image_Full_Url = jObjectImageFull["url"].ToString();
-            }
-        }
-
-        public Posts() { }        
-    }
-
     [Windows.Foundation.Metadata.WebHostHidden]
     public class PostDataCommon : VoilaMonAvis_FromScratch_.Common.BindableBase
     {
         private static Uri _baseUri = new Uri("ms-appx:///");
 
-        public PostDataCommon(String uniqueId, String title, String subtitle, String imagePath, String description)
+        public PostDataCommon(String uniqueId, String title, String imagePath)
         {
             this._uniqueId = uniqueId;
             this._title = title;
-            this._subtitle = subtitle;
-            this._description = description;
             this._imagePath = imagePath;
         }
 
@@ -102,22 +42,9 @@ namespace VoilaMonAvis.Data
             set { this.SetProperty(ref this._title, value); }
         }
 
-        private string _subtitle = string.Empty;
-        public string Subtitle
-        {
-            get { return this._subtitle; }
-            set { this.SetProperty(ref this._subtitle, value); }
-        }
-
-        private string _description = string.Empty;
-        public string Description
-        {
-            get { return this._description; }
-            set { this.SetProperty(ref this._description, value); }
-        }
-
         private ImageSource _image = null;
         private String _imagePath = null;
+        
         public ImageSource Image
         {
             get
@@ -142,38 +69,33 @@ namespace VoilaMonAvis.Data
             this._imagePath = path;
             this.OnPropertyChanged("Image");
         }
-
+        
         public override string ToString()
         {
             return this.Title;
         }
     }
 
+
     /// <summary>
     /// Modèle de données d'élément générique.
     /// </summary>
     public class PostDataItem : PostDataCommon
     {
-        public PostDataItem(String uniqueId, String title, String subtitle, String imagePath, String description, String content, PostDataGroup group)
-            : base(uniqueId, title, subtitle, imagePath, description)
+        public PostDataItem(String uniqueId, String title, String imagePath, String content, String contentNext, PostDataGroup group, Uri videoPath, int page)
+            : base(uniqueId, title, imagePath)
         {
-            this._content = content;
-            this._group = group;
+            this.Content = content;
+            this.Group = group;
+            this.VideoPath = videoPath;
+            this.Page = page;
         }
 
-        private string _content = string.Empty;
-        public string Content
-        {
-            get { return this._content; }
-            set { this.SetProperty(ref this._content, value); }
-        }
-
-        private PostDataGroup _group;
-        public PostDataGroup Group
-        {
-            get { return this._group; }
-            set { this.SetProperty(ref this._group, value); }
-        }
+        public string Content { get; set; }
+        public string ContentNext { get; set; }
+        public PostDataGroup Group { get; set; }
+        public Uri VideoPath { get; set; }
+        public int Page { get; set; }
     }
 
 
@@ -182,12 +104,14 @@ namespace VoilaMonAvis.Data
     /// </summary>
     public class PostDataGroup : PostDataCommon
     {
-        public PostDataGroup(String uniqueId, String title, String subtitle, String imagePath, String description)
-            : base(uniqueId, title, subtitle, imagePath, description)
+        public PostDataGroup(String uniqueId, String title, String imagePath, int pageCount)
+            : base(uniqueId, title, imagePath)
         {
+            this.PageCount = pageCount;
             Items.CollectionChanged += ItemsCollectionChanged;
         }
 
+        public int PageCount { get; set; }
         private void ItemsCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             // Fournit un sous-ensemble de la collection complète d'éléments avec laquelle effectuer une liaison à partir d'un GroupedItemsPage
@@ -201,50 +125,50 @@ namespace VoilaMonAvis.Data
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                    if (e.NewStartingIndex < 12)
+                    if (e.NewStartingIndex < 5)
                     {
                         TopItems.Insert(e.NewStartingIndex,Items[e.NewStartingIndex]);
-                        if (TopItems.Count > 12)
+                        if (TopItems.Count > 5)
                         {
-                            TopItems.RemoveAt(12);
+                            TopItems.RemoveAt(5);
                         }
                     }
                     break;
                 case NotifyCollectionChangedAction.Move:
-                    if (e.OldStartingIndex < 12 && e.NewStartingIndex < 12)
+                    if (e.OldStartingIndex < 5 && e.NewStartingIndex < 5)
                     {
                         TopItems.Move(e.OldStartingIndex, e.NewStartingIndex);
                     }
-                    else if (e.OldStartingIndex < 12)
+                    else if (e.OldStartingIndex < 5)
                     {
                         TopItems.RemoveAt(e.OldStartingIndex);
-                        TopItems.Add(Items[11]);
+                        TopItems.Add(Items[4]);
                     }
-                    else if (e.NewStartingIndex < 12)
+                    else if (e.NewStartingIndex < 5)
                     {
                         TopItems.Insert(e.NewStartingIndex, Items[e.NewStartingIndex]);
-                        TopItems.RemoveAt(12);
+                        TopItems.RemoveAt(5);
                     }
                     break;
                 case NotifyCollectionChangedAction.Remove:
-                    if (e.OldStartingIndex < 12)
+                    if (e.OldStartingIndex < 5)
                     {
                         TopItems.RemoveAt(e.OldStartingIndex);
-                        if (Items.Count >= 12)
+                        if (Items.Count >= 5)
                         {
-                            TopItems.Add(Items[11]);
+                            TopItems.Add(Items[4]);
                         }
                     }
                     break;
                 case NotifyCollectionChangedAction.Replace:
-                    if (e.OldStartingIndex < 12)
+                    if (e.OldStartingIndex < 5)
                     {
                         TopItems[e.OldStartingIndex] = Items[e.OldStartingIndex];
                     }
                     break;
                 case NotifyCollectionChangedAction.Reset:
                     TopItems.Clear();
-                    while (TopItems.Count < Items.Count && TopItems.Count < 12)
+                    while (TopItems.Count < Items.Count && TopItems.Count < 5)
                     {
                         TopItems.Add(Items[TopItems.Count]);
                     }
@@ -306,33 +230,43 @@ namespace VoilaMonAvis.Data
 
         public PostDataSource()
         {
-            getRecentPosts();            
+            GetAllCategoriesAsync(false);            
         }
 
-        private async void getRecentPosts()
+        public static void GetMoreDataSource(string uniqueId)
+        {
+            GetMoreItemGroup(uniqueId);
+        }
+
+
+        private async void GetAllCategoriesAsync(bool reload)
         {
             #region Recents posts
-            List<Posts> recentPosts = await PostsDal.GetRecentPost();
-
-            var groupRecentPost = new PostDataGroup("0",
-                   "Derniers articles",
-                   "",
-                   "Assets/DarkGray.png",
-                   "");
-            foreach (Posts post in recentPosts)
+            if (!reload)
             {
-                string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
-                string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
-                
-                groupRecentPost.Items.Add(new PostDataItem("Derniers articles" + "-Item-" + post.ID,
-                    title,
-                    "",
-                    post.Post_Image_Full_Url,
-                    "",
-                    content,
-                    groupRecentPost));
+                List<Posts> recentPosts = await PostsDal.GetRecentPost();
+
+                var groupRecentPost = new PostDataGroup("0",
+                       "Derniers articles",
+                       "Assets/DarkGray.png",
+                       1);
+                foreach (Posts post in recentPosts)
+                {
+                    string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
+                    string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
+                    string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
+
+                    groupRecentPost.Items.Add(new PostDataItem("Derniers articles" + "-Item-" + post.ID,
+                        title,
+                        post.Post_Image_Full_Url,
+                        content,
+                        contentNext,
+                        groupRecentPost,
+                        post.Post_Video_Url,
+                        1));
+                }
+                this.AllGroups.Add(groupRecentPost);
             }
-            this.AllGroups.Add(groupRecentPost);
             #endregion
 
             #region All Categories and posts
@@ -340,28 +274,81 @@ namespace VoilaMonAvis.Data
 
             foreach (Category category in Categories)
             {
-                var group = new PostDataGroup(category.Category_Id.ToString(),
-                    category.Category_Title,
-                    "",
-                    "Assets/DarkGray.png",
-                    category.Category_Description);
-                List<Posts> posts = await PostsDal.GetPostsByCategory(category.Category_Id.ToString());
-
-                foreach (Posts post in posts)
+                var groupTest = GetGroup(category.Category_Id.ToString());
+                if (groupTest == null)
                 {
-                    string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
-                    string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
-                    group.Items.Add(new PostDataItem(category.Category_Id.ToString() + "-Item-" + post.ID,
-                        title,
-                        "",
-                        post.Post_Image_Full_Url,
-                        "",
-                        content,
-                        group));
+                    var group = new PostDataGroup(category.Category_Id.ToString(),
+                        category.Category_Title,
+                        "Assets/DarkGray.png",
+                        1);
+                    List<Posts> posts = await PostsDal.GetPostsByCategory(category.Category_Id.ToString());
+
+                    foreach (Posts post in posts)
+                    {
+                        string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
+                        string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
+                        string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
+                        group.Items.Add(new PostDataItem(category.Category_Id.ToString() + "-Item-" + post.ID,
+                            title,
+                            post.Post_Image_Full_Url,
+                            content,
+                            contentNext,
+                            group,
+                            post.Post_Video_Url,
+                            1));
+                    }
+                    this.AllGroups.Add(group);
                 }
-                this.AllGroups.Add(group);                
             }     
             #endregion       
+        }
+
+
+
+        private static bool bCancelGetMoreItemGroup = false;
+        public static void CancelGetMoreItemGroup()
+        {
+            bCancelGetMoreItemGroup = true;
+        }
+        private static async void GetMoreItemGroup(string uniqueId)
+        {
+            bool needItemLoad = true;
+            int pageToLoad = 0;
+
+            while (needItemLoad)
+            {
+                if (!bCancelGetMoreItemGroup)
+                {
+                    var group = GetGroup(uniqueId);
+                    pageToLoad = group.Items.Last().Page + 1;
+                    List<Posts> morePost = await PostsDal.GetRecentPost(pageToLoad);
+
+                    if (morePost != null)
+                    {
+                        foreach (Posts post in morePost)
+                        {
+                            string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
+                            string contentNext = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content_Next, @"<[^>]*>", String.Empty));
+                            string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
+                            group.Items.Add(new PostDataItem(uniqueId + "-Item-" + post.ID,
+                                title,
+                                post.Post_Image_Full_Url,
+                                content,
+                                contentNext,
+                                group,
+                                post.Post_Video_Url,
+                                pageToLoad));
+                        }
+                    }
+                    else
+                        needItemLoad = false;
+                }
+                else
+                {
+                    bCancelGetMoreItemGroup = false;
+                    needItemLoad = false;
+                }
+            }
         }
     }
 }

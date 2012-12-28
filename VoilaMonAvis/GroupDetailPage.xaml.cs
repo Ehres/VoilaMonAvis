@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text.RegularExpressions;
 using VoilaMonAvis.Data;
+using VoilaMonAvis.DataAccessLayer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,6 +26,8 @@ namespace VoilaMonAvis_FromScratch_
     /// </summary>
     public sealed partial class GroupDetailPage : VoilaMonAvis_FromScratch_.Common.LayoutAwarePage
     {
+        public string idGroup = "";
+        public PostDataGroup group = null;
         public GroupDetailPage()
         {
             this.InitializeComponent();
@@ -40,11 +45,14 @@ namespace VoilaMonAvis_FromScratch_
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: créez un modèle de données approprié pour le domaine posant problème pour remplacer les exemples de données
-            var group = PostDataSource.GetGroup((String)navigationParameter);
+            var groupSelected = PostDataSource.GetGroup((String)navigationParameter);
+            group = groupSelected;
             this.DefaultViewModel["Group"] = group;
             this.DefaultViewModel["Items"] = group.Items;
-        }
+            idGroup = group.UniqueId;
 
+            PostDataSource.GetMoreDataSource((String)navigationParameter);
+        }
 
         /// <summary>
         /// Invoqué lorsqu'un utilisateur clique sur un élément.
@@ -58,6 +66,6 @@ namespace VoilaMonAvis_FromScratch_
             // en transmettant les informations requises en tant que paramètre de navigation.
             var itemId = ((PostDataItem)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(ItemDetailPage), itemId);
-        }
+        }       
     }
 }

@@ -70,8 +70,9 @@ namespace VoilaMonAvis_FromScratch_
                 }
             }
             // Vérifiez que la fenêtre actuelle est active
-            Window.Current.Activate();
+            Window.Current.Activate();           
         }
+
 
         /// <summary>
         /// Appelé lorsque l'exécution de l'application est suspendue. L'état de l'application est enregistré

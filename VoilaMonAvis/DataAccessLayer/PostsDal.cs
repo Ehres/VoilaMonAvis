@@ -5,8 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using VoilaMonAvis.Data;
+using VoilaMonAvis_FromScratch_.DataModel;
 
 namespace VoilaMonAvis.DataAccessLayer
 {
@@ -36,10 +38,16 @@ namespace VoilaMonAvis.DataAccessLayer
 
         public async static Task<List<Posts>> GetRecentPost()
         {
-            string json = await JsonDal.GetJson(Config.Url_GetRecentPosts);    
-       
+            string json = await JsonDal.GetJson(Config.Url_GetRecentPosts);
+
             return GetListPostByJson(json);
         }
+        public async static Task<List<Posts>> GetRecentPost(int page)
+        {
+            string json = await JsonDal.GetJson(Config.Url_GetRecentPosts + Config.Page + page);
+
+            return GetListPostByJson(json);
+        }       
 
         public async static Task<Posts> GetPost(int id)
         {
@@ -54,10 +62,22 @@ namespace VoilaMonAvis.DataAccessLayer
 
             return GetListPostByJson(json);
         }
+        public async static Task<List<Posts>> GetPostsByDate(DateTime date, int page)
+        {
+            string json = await JsonDal.GetJson(Config.Url_GetDatePosts + date + Config.Page + page);
+
+            return GetListPostByJson(json);
+        }
 
         public async static Task<List<Posts>> GetPostsByCategory(string category)
         {
             string json = await JsonDal.GetJson(Config.Url_GetCategoryPosts + category);
+
+            return GetListPostByJson(json);
+        }
+        public async static Task<List<Posts>> GetPostsByCategory(string category, int page)
+        {
+            string json = await JsonDal.GetJson(Config.Url_GetCategoryPosts + category + Config.Page + page);
 
             return GetListPostByJson(json);
         }
@@ -68,10 +88,22 @@ namespace VoilaMonAvis.DataAccessLayer
 
             return GetListPostByJson(json);
         }
+        public async static Task<List<Posts>> GetPostsByTag(string tag, int page)
+        {
+            string json = await JsonDal.GetJson(Config.Url_GetTagPosts + tag + Config.Page + page);
+
+            return GetListPostByJson(json);
+        }
 
         public async static Task<List<Posts>> GetPostsByAuthor(int authorsId)
         {
             string json = await JsonDal.GetJson(Config.Url_GetAuthorPosts + authorsId);
+
+            return GetListPostByJson(json);
+        }
+        public async static Task<List<Posts>> GetPostsByAuthor(int authorsId, int page)
+        {
+            string json = await JsonDal.GetJson(Config.Url_GetAuthorPosts + authorsId + Config.Page + page);
 
             return GetListPostByJson(json);
         }
@@ -81,6 +113,15 @@ namespace VoilaMonAvis.DataAccessLayer
             string json = await JsonDal.GetJson(Config.Url_Search + value);
 
             return GetListPostByJson(json);
+        }
+
+        private static int PageCount(string json)
+        {
+            JObject o = JObject.Parse(json);
+
+            int pageCount = int.Parse((string)o["pages"]);
+
+            return 0;
         }
     }
 }

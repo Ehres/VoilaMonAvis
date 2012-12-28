@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using VoilaMonAvis.Data;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
@@ -128,6 +129,10 @@ namespace VoilaMonAvis_FromScratch_.Common
         /// événement.</param>
         protected virtual void GoBack(object sender, RoutedEventArgs e)
         {
+            if (this.Frame.SourcePageType.Name == "GroupDetailPage")            
+                PostDataSource.CancelGetMoreItemGroup();
+            
+
             // Utilisez le cadre de navigation pour revenir à la page précédente
             if (this.Frame != null && this.Frame.CanGoBack) this.Frame.GoBack();
         }

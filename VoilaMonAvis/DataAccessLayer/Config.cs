@@ -21,5 +21,7 @@ namespace VoilaMonAvis.DataAccessLayer
         public static string Url_GetAllTags = Url_Site + "?json=get_tag_index";
         public static string Url_GetAllAuthors = Url_Site + "?json=get_author_index";
         public static string Url_GetAllPages = Url_Site + "?json=get_page_index";
+
+        public static string Page = "&page=";
     }
 }

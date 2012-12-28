@@ -12,6 +12,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using VoilaMonAvis.Data;
+using System.Threading.Tasks;
+using Windows.UI.ViewManagement;
+using Windows.Graphics.Display;
+using Windows.Storage.Pickers;
+using Windows.Storage;
 
 // Pour en savoir plus sur le modèle d'élément Page Détail de l'élément, consultez la page http://go.microsoft.com/fwlink/?LinkId=234232
 
@@ -40,28 +45,19 @@ namespace VoilaMonAvis_FromScratch_
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // Autorise l'état de page enregistré à substituer l'élément initial à afficher
-            if (pageState != null && pageState.ContainsKey("SelectedItem"))
-            {
+            if (pageState != null && pageState.ContainsKey("SelectedItem"))            
                 navigationParameter = pageState["SelectedItem"];
-            }
+            
 
             // TODO: créez un modèle de données approprié pour le domaine posant problème pour remplacer les exemples de données
             var item = PostDataSource.GetItem((String)navigationParameter);
             this.DefaultViewModel["Group"] = item.Group;
             this.DefaultViewModel["Items"] = item.Group.Items;
-            this.flipView.SelectedItem = item;
-        }
-
-        /// <summary>
-        /// Conserve l'état associé à cette page en cas de suspension de l'application ou de la
-        /// suppression de la page du cache de navigation. Les valeurs doivent être conformes aux
-        /// exigences en matière de sérialisation de <see cref="SuspensionManager.SessionState"/>.
-        /// </summary>
-        /// <param name="pageState">Dictionnaire vide à remplir à l'aide de l'état sérialisable.</param>
-        protected override void SaveState(Dictionary<String, Object> pageState)
-        {
-            //var selectedItem = (PostDataSource)this.flipView.SelectedItem;
-            //pageState["SelectedItem"] = selectedItem.UniqueId;
+            
+            System.Collections.ObjectModel.ObservableCollection<PostDataItem> items = new System.Collections.ObjectModel.ObservableCollection<PostDataItem>();
+            items.Add(item);
+            this.DefaultViewModel["Items"] = items;
+            this.flipView.SelectedItem = item;            
         }
     }
 }
