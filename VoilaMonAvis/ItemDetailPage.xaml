@@ -6,7 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:VoilaMonAvis"
     xmlns:common="using:VoilaMonAvis.Common"
-    xmlns:data="using:VoilaMonAvis.Data"
+    xmlns:data="using:VoilaMonAvis.DataModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -18,7 +18,8 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"
             d:Source="{Binding AllGroups[0].Items, Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}"/>
-        
+
+        <x:String x:Key="AppName">Voila Mon Avis - Détails de l'article</x:String>
     </Page.Resources>
 
     <!--
@@ -28,7 +29,6 @@
     -->
     <Grid
         Style="{StaticResource LayoutRootStyle}"
-        DataContext="{Binding Group}"
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}">
 
         <Grid.RowDefinitions>
@@ -162,7 +162,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="1" IsHitTestVisible="false"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

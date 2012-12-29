@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using VoilaMonAvis.DataAccessLayer;
+using VoilaMonAvis.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -38,7 +40,19 @@ namespace VoilaMonAvis
         /// antérieure. Null lors de la première visite de la page.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            // TODO: assignez une collection d'éléments pouvant être liée à this.DefaultViewModel["Items"]
+            FindItem((string)navigationParameter);
+        }
+
+        private async void FindItem(string query)
+        {
+            List<PostDataItem> posts = await PostDataSource.Find(query);
+            this.DefaultViewModel["Items"] = posts;
+        }
+
+        void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var itemId = ((PostDataItem)e.ClickedItem).UniqueId;
+            this.Frame.Navigate(typeof(ItemDetailPage), itemId);
         }
     }
 }

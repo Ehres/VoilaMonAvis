@@ -18,7 +18,7 @@
             Source="{Binding Items}"/>
 
         <!-- TODO: supprimez cette ligne si la clé AppName est déclarée dans App.xaml -->
-        <x:String x:Key="AppName">Mon application</x:String>
+        <x:String x:Key="AppName">Voila Mon Avis - Recherche</x:String>
     </Page.Resources>
 
     <!--
@@ -33,7 +33,7 @@
         </Grid.RowDefinitions>
 
         <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
-        <GridView
+        <GridView x:ConnectionId='1'
             x:Name="itemGridView"
             AutomationProperties.AutomationId="ItemsGridView"
             AutomationProperties.Name="Items"
@@ -43,10 +43,13 @@
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"
+            IsItemClickEnabled="true"
+                                          
+            Background="#1BA1E2"/>
 
         <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
-        <ListView
+        <ListView x:ConnectionId='2'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
@@ -58,7 +61,10 @@
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             ItemTemplate="{StaticResource Standard80ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"
+            IsItemClickEnabled="true"
+                                          
+            Background="#1BA1E2"/>
 
         <!-- Bouton Précédent et titre de la page -->
         <Grid>
@@ -66,7 +72,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 

@@ -49,9 +49,8 @@ namespace VoilaMonAvis
                 navigationParameter = pageState["SelectedItem"];
             
 
-            // TODO: créez un modèle de données approprié pour le domaine posant problème pour remplacer les exemples de données
             var item = PostDataSource.GetItem((String)navigationParameter);
-            this.DefaultViewModel["Group"] = item.Group;
+            //this.DefaultViewModel["Group"] = item.Group;
             this.DefaultViewModel["Items"] = item.Group.Items;
             
             System.Collections.ObjectModel.ObservableCollection<PostDataItem> items = new System.Collections.ObjectModel.ObservableCollection<PostDataItem>();

@@ -18,7 +18,7 @@
             Source="{Binding Items}"/>
 
         <!-- TODO: supprimez cette ligne si la clé AppName est déclarée dans App.xaml -->
-        <x:String x:Key="AppName">Mon application</x:String>
+        <x:String x:Key="AppName">Voila Mon Avis - Recherche</x:String>
     </Page.Resources>
 
     <!--
@@ -43,7 +43,10 @@
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"
+            IsItemClickEnabled="true"
+            ItemClick="ItemView_ItemClick"
+            Background="#1BA1E2"/>
 
         <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
         <ListView
@@ -58,7 +61,10 @@
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             ItemTemplate="{StaticResource Standard80ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"
+            IsItemClickEnabled="true"
+            ItemClick="ItemView_ItemClick"
+            Background="#1BA1E2"/>
 
         <!-- Bouton Précédent et titre de la page -->
         <Grid>

@@ -346,5 +346,42 @@ namespace VoilaMonAvis.DataModel
             }
             return true;
         }
+
+        public static async Task<List<PostDataItem>> Find(string query)
+        {
+            List<PostDataItem> items = _postDataSource.AllGroups.SelectMany(group => group.Items).Where((item) => item.Content.Contains(query) || item.Title.Contains(query)).ToList();
+
+            List<Posts> posts = await PostsDal.Find(query);
+
+            foreach (Posts post in posts)
+            {
+                var group = new PostDataGroup(post.Post_Categories.First().Category_Id.ToString(),
+                        post.Post_Categories.First().Category_Title,
+                        "Assets/DarkGray.png",
+                        1);
+
+                if (_postDataSource._allGroups.Where(g => g.UniqueId == group.UniqueId).Count() == 0)
+                    _postDataSource._allGroups.Add(group);
+                else
+                    group = GetGroup(post.Post_Categories.First().Category_Id.ToString());
+
+                string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
+                string title = WebUtility.HtmlDecode(Regex.Replace(post.Post_Title, @"<[^>]*>", String.Empty));
+                PostDataItem pdi = new PostDataItem(post.Post_Categories.First().Category_Id + "-Item-" + post.ID,
+                                title,
+                                post.Post_Image_Full_Url,
+                                content,
+                                group,
+                                post.Post_Video_Url,
+                                1);
+                group.Items.Add(pdi);
+
+                if (!items.Contains(pdi))
+                    items.Add(pdi);
+                
+            }
+
+            return items;            
+        }
     }
 }
