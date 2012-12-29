@@ -50,7 +50,8 @@
             SelectionMode="None"
             IsSwipeEnabled="false"
             IsItemClickEnabled="True"
-            ItemClick="ItemView_ItemClick">
+            ItemClick="ItemView_ItemClick"
+            Background="#1BA1E2">
 
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
