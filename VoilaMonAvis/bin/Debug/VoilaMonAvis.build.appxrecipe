@@ -27,25 +27,37 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\Logo.jpg">
       <PackagePath>Assets\Logo.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.jpg">
       <PackagePath>Assets\SplashScreen.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.jpg">
       <PackagePath>Assets\SmallLogo.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-140.jpg">
       <PackagePath>Assets\SplashScreen.scale-140.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-180.jpg">
       <PackagePath>Assets\SplashScreen.scale-180.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.jpg">
       <PackagePath>Assets\StoreLogo.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_Logo%28negatif%29.jpg">
+      <PackagePath>Assets\VoilaMonAvis_Logo%28negatif%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg">
+      <PackagePath>Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg">
+      <PackagePath>Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg">
+      <PackagePath>Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>

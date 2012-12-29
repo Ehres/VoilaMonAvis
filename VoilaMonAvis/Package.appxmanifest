@@ -4,7 +4,7 @@
   <Properties>
     <DisplayName>VoilaMonAvis(FromScratch)</DisplayName>
     <PublisherDisplayName>Maxime</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\VoilaMonAvis_LogoStore(négatif).jpg</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="VoilaMonAvis_FromScratch_.App">
-      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\Logo.jpg" SmallLogo="Assets\SmallLogo.png" Description="VoilaMonAvis(FromScratch)" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" ShortName="SplashScreen" />
-        <SplashScreen Image="Assets\SplashScreen.jpg" BackgroundColor="white" />
+      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\VoilaMonAvis_Logo(negatif).jpg" SmallLogo="Assets\VoilaMonAvis_SmallLogo(négatif).jpg" Description="VoilaMonAvis(FromScratch)" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="Voila Mon Avis" />
+        <SplashScreen Image="Assets\VoilaMonAvis_SplashScreen(négatif).jpg" BackgroundColor="black" />
       </VisualElements>
     </Application>
   </Applications>

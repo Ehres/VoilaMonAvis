@@ -155,6 +155,10 @@
     <Content Include="Assets\SplashScreen.scale-140.jpg" />
     <Content Include="Assets\SplashScreen.scale-180.jpg" />
     <Content Include="Assets\StoreLogo.jpg" />
+    <Content Include="Assets\VoilaMonAvis_Logo%28negatif%29.jpg" />
+    <Content Include="Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg" />
     <Content Include="Common\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
