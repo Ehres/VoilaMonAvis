@@ -34,6 +34,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <ProgressBar x:Name="progressBarAllItemLoaded" IsIndeterminate="True" Margin="0,0,0,134" ></ProgressBar>
+        
         <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
         <GridView x:ConnectionId='1'
             x:Name="itemGridView"

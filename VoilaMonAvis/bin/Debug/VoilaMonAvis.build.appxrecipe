@@ -13,11 +13,11 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.exe">
-      <PackagePath>VoilaMonAvis%28FromScratch%29.exe</PackagePath>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
+      <PackagePath>VoilaMonAvis.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.pdb">
-      <PackagePath>VoilaMonAvis%28FromScratch%29.pdb</PackagePath>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
+      <PackagePath>VoilaMonAvis.pdb</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>

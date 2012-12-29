@@ -39,7 +39,7 @@ namespace VoilaMonAvis_FromScratch_
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             var postDataGroups = PostDataSource.GetGroups((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = postDataGroups;                        
+            this.DefaultViewModel["Groups"] = postDataGroups;     
         }
 
         void Header_Click(object sender, RoutedEventArgs e)

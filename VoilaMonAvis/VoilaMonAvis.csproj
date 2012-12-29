@@ -7,8 +7,8 @@
     <ProjectGuid>{80C6AB44-75CB-43A0-A44A-4CDD36E4D0FC}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VoilaMonAvis_FromScratch_</RootNamespace>
-    <AssemblyName>VoilaMonAvis(FromScratch)</AssemblyName>
+    <RootNamespace>VoilaMonAvis</RootNamespace>
+    <AssemblyName>VoilaMonAvis</AssemblyName>
     <DefaultLanguage>fr-FR</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

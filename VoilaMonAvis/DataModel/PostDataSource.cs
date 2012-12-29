@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VoilaMonAvis;
 using VoilaMonAvis.DataAccessLayer;
+using VoilaMonAvis_FromScratch_;
 using VoilaMonAvis_FromScratch_.DataModel;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
@@ -233,14 +234,8 @@ namespace VoilaMonAvis.Data
             GetAllCategoriesAsync(false);            
         }
 
-        public static void GetMoreDataSource(string uniqueId)
-        {
-            GetMoreItemGroup(uniqueId);
-        }
-
-
         private async void GetAllCategoriesAsync(bool reload)
-        {
+        {            
             #region Recents posts
             if (!reload)
             {
@@ -298,16 +293,16 @@ namespace VoilaMonAvis.Data
                 }
             }     
             #endregion       
+
+            
         }
-
-
 
         private static bool bCancelGetMoreItemGroup = false;
         public static void CancelGetMoreItemGroup()
         {
             bCancelGetMoreItemGroup = true;
         }
-        private static async void GetMoreItemGroup(string uniqueId)
+        public static async Task<bool> GetMoreItemGroup(string uniqueId)
         {
             bool needItemLoad = true;
             int pageToLoad = 0;
@@ -318,9 +313,15 @@ namespace VoilaMonAvis.Data
                 {
                     var group = GetGroup(uniqueId);
                     pageToLoad = group.Items.Last().Page + 1;
-                    List<Posts> morePost = await PostsDal.GetRecentPost(pageToLoad);
 
-                    if (morePost != null)
+                    List<Posts> morePost;
+                    if (uniqueId == "0")
+                        morePost = await PostsDal.GetRecentPost(pageToLoad);
+                    else
+                        morePost = await PostsDal.GetPostsByCategory(uniqueId, pageToLoad);
+                    
+
+                    if (morePost != null && morePost.Count > 0)
                     {
                         foreach (Posts post in morePost)
                         {
@@ -345,6 +346,7 @@ namespace VoilaMonAvis.Data
                     needItemLoad = false;
                 }
             }
+            return true;
         }
     }
 }

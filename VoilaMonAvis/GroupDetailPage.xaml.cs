@@ -44,6 +44,7 @@ namespace VoilaMonAvis_FromScratch_
         /// antérieure. Null lors de la première visite de la page.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            progressBarAllItemLoaded.Visibility = Visibility.Visible;
             // TODO: créez un modèle de données approprié pour le domaine posant problème pour remplacer les exemples de données
             var groupSelected = PostDataSource.GetGroup((String)navigationParameter);
             group = groupSelected;
@@ -51,7 +52,14 @@ namespace VoilaMonAvis_FromScratch_
             this.DefaultViewModel["Items"] = group.Items;
             idGroup = group.UniqueId;
 
-            PostDataSource.GetMoreDataSource((String)navigationParameter);
+            LoadMoreItemGroup((String)navigationParameter);
+        }
+
+        private async void LoadMoreItemGroup(string uniqueId)
+        {
+            bool itemsLoaded = await PostDataSource.GetMoreItemGroup(uniqueId);
+            if (itemsLoaded)
+                progressBarAllItemLoaded.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>

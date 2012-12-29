@@ -5,7 +5,7 @@
     <WindowsUser>Maxime Grébauval</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>AC3C368AF97AE67B40A0EACB17A8A185BB86D927C7A5BC3C3372E79AE9251FEA</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>B13FC062DE188E5E7FC618E9E6D8F2C13CC38C4B641BE6F44367E2FF53EBB4B5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11bc213d-d8e0-4b8a-8723-df34f4d32e88_1.0.0.0_neutral__b7ycwg95kd4wt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11bc213d-d8e0-4b8a-8723-df34f4d32e88_b7ycwg95kd4wt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>11bc213d-d8e0-4b8a-8723-df34f4d32e88</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-28T22:25:23.012</Modified>
+      <Modified>2012-12-28T22:38:56.324</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.exe">
-      <PackagePath>VoilaMonAvis%28FromScratch%29.exe</PackagePath>
-      <Modified>2012-12-28T22:25:22.581</Modified>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
+      <PackagePath>VoilaMonAvis.exe</PackagePath>
+      <Modified>2012-12-29T00:57:15.888</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis%28FromScratch%29.pdb">
-      <PackagePath>VoilaMonAvis%28FromScratch%29.pdb</PackagePath>
-      <Modified>2012-12-28T22:25:22.543</Modified>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
+      <PackagePath>VoilaMonAvis.pdb</PackagePath>
+      <Modified>2012-12-29T00:57:15.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -70,11 +70,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
-      <Modified>2012-12-28T18:07:13.922</Modified>
+      <Modified>2012-12-29T00:33:14.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
-      <Modified>2012-12-20T04:01:30.000</Modified>
+      <Modified>2012-12-29T00:32:48.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>

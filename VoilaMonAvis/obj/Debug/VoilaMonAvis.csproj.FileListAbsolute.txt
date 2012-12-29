@@ -82,8 +82,6 @@ C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\XamlTypeInfo.g.cs
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\App.xaml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupDetailPage.xaml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\GroupedItemsPage.xaml
-C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis(FromScratch).exe
-C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis(FromScratch).pdb
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.build.appxrecipe
@@ -91,8 +89,6 @@ C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\Newtonsoft.Json.dll
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\Newtonsoft.Json.xml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\ItemDetailPage.xaml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\Common\StandardStyles.xaml
-C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis(FromScratch).exe
-C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis(FromScratch).pdb
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis.csproj.GenerateResource.Cache
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\priconfig.xml
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\layout.resfiles
@@ -105,3 +101,7 @@ C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\priconfig.xml.intermediate
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\layout.resfiles.intermediate
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\resources.resfiles.intermediate
 C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\pri.resfiles.intermediate
+C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe
+C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb
+C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis.exe
+C:\project\VMA\VoilaMonAvis\VoilaMonAvis\obj\Debug\VoilaMonAvis.pdb
