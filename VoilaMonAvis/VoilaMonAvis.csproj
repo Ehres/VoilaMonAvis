@@ -149,10 +149,12 @@
     <None Include="VoilaMonAvis(FromScratch)_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Logo.png" />
-    <Content Include="Assets\SmallLogo.png" />
-    <Content Include="Assets\SplashScreen.png" />
-    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Logo.jpg" />
+    <Content Include="Assets\SplashScreen.jpg" />
+    <Content Include="Assets\SmallLogo.jpg" />
+    <Content Include="Assets\SplashScreen.scale-140.jpg" />
+    <Content Include="Assets\SplashScreen.scale-180.jpg" />
+    <Content Include="Assets\StoreLogo.jpg" />
     <Content Include="Common\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

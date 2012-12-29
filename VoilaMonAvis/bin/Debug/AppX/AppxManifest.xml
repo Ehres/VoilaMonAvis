@@ -22,9 +22,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="VoilaMonAvis.exe" EntryPoint="VoilaMonAvis_FromScratch_.App">
-      <VisualElements DisplayName="VoilaMonAvis(FromScratch)" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="VoilaMonAvis(FromScratch)" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\Logo.jpg" SmallLogo="Assets\SmallLogo.png" Description="VoilaMonAvis(FromScratch)" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" ShortName="SplashScreen" />
+        <SplashScreen Image="Assets\SplashScreen.jpg" BackgroundColor="white" />
       </VisualElements>
     </Application>
   </Applications>

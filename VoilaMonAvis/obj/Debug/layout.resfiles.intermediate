@@ -1,7 +1,9 @@
-Assets\Logo.png
-Assets\SmallLogo.png
-Assets\SplashScreen.png
-Assets\StoreLogo.png
+Assets\Logo.jpg
+Assets\SmallLogo.jpg
+Assets\SplashScreen.jpg
+Assets\SplashScreen.scale-140.jpg
+Assets\SplashScreen.scale-180.jpg
+Assets\StoreLogo.jpg
 App.xaml
 Common\StandardStyles.xaml
 GroupDetailPage.xaml

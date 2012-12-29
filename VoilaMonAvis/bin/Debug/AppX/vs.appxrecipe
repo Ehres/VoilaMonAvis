@@ -5,7 +5,7 @@
     <WindowsUser>Maxime Grébauval</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>B13FC062DE188E5E7FC618E9E6D8F2C13CC38C4B641BE6F44367E2FF53EBB4B5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>335CA7352B3A185CE95AAC5F574FB51C4E9C106B70B21FD6677842372A041718</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11bc213d-d8e0-4b8a-8723-df34f4d32e88_1.0.0.0_neutral__b7ycwg95kd4wt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11bc213d-d8e0-4b8a-8723-df34f4d32e88_b7ycwg95kd4wt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>11bc213d-d8e0-4b8a-8723-df34f4d32e88</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-28T22:38:56.324</Modified>
+      <Modified>2012-12-29T01:13:33.676</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
       <PackagePath>VoilaMonAvis.exe</PackagePath>
-      <Modified>2012-12-29T00:57:15.888</Modified>
+      <Modified>2012-12-29T01:13:33.502</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
       <PackagePath>VoilaMonAvis.pdb</PackagePath>
-      <Modified>2012-12-29T00:57:15.861</Modified>
+      <Modified>2012-12-29T01:13:33.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -36,25 +36,33 @@
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
       <Modified>2012-12-20T04:12:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\Logo.png">
-      <PackagePath>Assets\Logo.png</PackagePath>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\Logo.jpg">
+      <PackagePath>Assets\Logo.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-20T04:04:40.000</Modified>
+      <Modified>2012-12-29T01:06:24.770</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.png">
-      <PackagePath>Assets\SmallLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.jpg">
+      <PackagePath>Assets\SplashScreen.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-20T04:04:36.000</Modified>
+      <Modified>2012-12-29T01:07:18.534</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.png">
-      <PackagePath>Assets\SplashScreen.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-20T04:04:34.000</Modified>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.jpg">
+      <PackagePath>Assets\SmallLogo.jpg</PackagePath>
+      <Modified>2012-12-29T01:07:07.496</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-140.jpg">
+      <PackagePath>Assets\SplashScreen.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-20T04:04:32.000</Modified>
+      <Modified>2012-12-29T01:07:18.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-180.jpg">
+      <PackagePath>Assets\SplashScreen.scale-180.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-12-29T01:07:18.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.jpg">
+      <PackagePath>Assets\StoreLogo.jpg</PackagePath>
+      <Modified>2012-12-29T01:08:24.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
@@ -82,7 +90,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-12-23T16:59:28.243</Modified>
+      <Modified>2012-12-29T01:13:33.572</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
