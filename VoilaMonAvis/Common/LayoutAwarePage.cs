@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using VoilaMonAvis.Data;
+using VoilaMonAvis.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
@@ -12,7 +12,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace VoilaMonAvis_FromScratch_.Common
+namespace VoilaMonAvis.Common
 {
     /// <summary>
     /// Implémentation standard de page qui offre plusieurs avantages importants :

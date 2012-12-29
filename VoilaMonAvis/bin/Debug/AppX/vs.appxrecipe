@@ -5,7 +5,7 @@
     <WindowsUser>Maxime Grébauval</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>060A1C3377DD388D603FFC7C3E98001D5994B24359A80AAAC0AAFD59F84BCE86</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>0DBC632D8CD110151D1CE6C10A45CC189A35A630785DC1D136D6944C4378ED2E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11bc213d-d8e0-4b8a-8723-df34f4d32e88_1.0.0.0_neutral__b7ycwg95kd4wt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11bc213d-d8e0-4b8a-8723-df34f4d32e88_b7ycwg95kd4wt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>11bc213d-d8e0-4b8a-8723-df34f4d32e88</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-29T09:35:59.694</Modified>
+      <Modified>2012-12-29T10:23:20.617</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
       <PackagePath>VoilaMonAvis.exe</PackagePath>
-      <Modified>2012-12-29T09:45:45.421</Modified>
+      <Modified>2012-12-29T10:23:19.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
       <PackagePath>VoilaMonAvis.pdb</PackagePath>
-      <Modified>2012-12-29T09:45:45.379</Modified>
+      <Modified>2012-12-29T10:23:19.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -80,11 +80,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2012-12-29T09:32:49.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2012-12-29T01:36:27.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg">
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-12-20T04:01:42.000</Modified>
+      <Modified>2012-12-29T10:07:51.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -110,19 +110,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
-      <Modified>2012-12-29T09:43:08.916</Modified>
+      <Modified>2012-12-29T10:11:32.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
-      <Modified>2012-12-29T09:45:05.736</Modified>
+      <Modified>2012-12-29T10:11:32.649</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
-      <Modified>2012-12-29T09:45:39.344</Modified>
+      <Modified>2012-12-29T10:11:32.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
+      <PackagePath>SearchItemsPage.xaml</PackagePath>
+      <Modified>2012-12-29T10:05:21.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-12-29T09:35:58.368</Modified>
+      <Modified>2012-12-29T10:23:20.389</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

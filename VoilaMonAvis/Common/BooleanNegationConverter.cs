@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml.Data;
 
-namespace VoilaMonAvis_FromScratch_.Common
+namespace VoilaMonAvis.Common
 {
     /// <summary>
     /// Convertisseur de valeur qui convertit true en false et vice versa.

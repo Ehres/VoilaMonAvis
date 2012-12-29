@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Documents;
 
-namespace VoilaMonAvis_FromScratch_.Common
+namespace VoilaMonAvis.Common
 {
     /// <summary>
     /// Wrapper pour <see cref="RichTextBlock"/> qui crée autant de colonnes de dépassement

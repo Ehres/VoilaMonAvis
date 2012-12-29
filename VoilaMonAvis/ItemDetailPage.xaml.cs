@@ -11,22 +11,22 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using VoilaMonAvis.Data;
 using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
 using Windows.Graphics.Display;
 using Windows.Storage.Pickers;
 using Windows.Storage;
+using VoilaMonAvis.DataModel;
 
 // Pour en savoir plus sur le modèle d'élément Page Détail de l'élément, consultez la page http://go.microsoft.com/fwlink/?LinkId=234232
 
-namespace VoilaMonAvis_FromScratch_
+namespace VoilaMonAvis
 {
     /// <summary>
     /// Page affichant les détails d'un élément au sein d'un groupe, offrant la possibilité de
     /// consulter les autres éléments qui appartiennent au même groupe.
     /// </summary>
-    public sealed partial class ItemDetailPage : VoilaMonAvis_FromScratch_.Common.LayoutAwarePage
+    public sealed partial class ItemDetailPage : VoilaMonAvis.Common.LayoutAwarePage
     {
         public ItemDetailPage()
         {

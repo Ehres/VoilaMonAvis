@@ -10,15 +10,13 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using VoilaMonAvis;
 using VoilaMonAvis.DataAccessLayer;
-using VoilaMonAvis_FromScratch_;
-using VoilaMonAvis_FromScratch_.DataModel;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace VoilaMonAvis.Data
+namespace VoilaMonAvis.DataModel
 {
     [Windows.Foundation.Metadata.WebHostHidden]
-    public class PostDataCommon : VoilaMonAvis_FromScratch_.Common.BindableBase
+    public class PostDataCommon : VoilaMonAvis.Common.BindableBase
     {
         private static Uri _baseUri = new Uri("ms-appx:///");
 

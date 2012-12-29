@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle Application vide, consultez la page http://go.microsoft.com/fwlink/?LinkId=234227
 
-namespace VoilaMonAvis_FromScratch_
+namespace VoilaMonAvis
 {
     /// <summary>
     /// Fournit un comportement spécifique à l'application afin de compléter la classe Application par défaut.
@@ -86,6 +86,36 @@ namespace VoilaMonAvis_FromScratch_
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: enregistrez l'état de l'application et arrêtez toute activité en arrière-plan
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// Appelé losque l'utilisateur fait un recherche à partir de la charmeBar
+        /// </summary>
+        /// <param name="args"></param>
+        protected override void OnSearchActivated(SearchActivatedEventArgs args)
+        {
+            Frame frame = CreateOrGetCurrentFrame();
+            frame.Navigate(typeof(SearchItemsPage), args.QueryText);
+        }
+
+        Frame CreateOrGetCurrentFrame()
+        {
+            Frame frame;
+            UIElement content = Window.Current.Content;
+
+            if (content != null && content is Frame)
+            {
+                frame = content as Frame;
+            }
+            else
+            {
+                frame = new Frame();
+
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+            }
+
+            return frame;
         }
     }
 }

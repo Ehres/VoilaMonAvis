@@ -59,10 +59,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg</PackagePath>
@@ -88,6 +88,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
+      <PackagePath>SearchItemsPage.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

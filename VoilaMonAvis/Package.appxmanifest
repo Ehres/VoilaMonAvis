@@ -2,7 +2,7 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
   <Identity Name="11bc213d-d8e0-4b8a-8723-df34f4d32e88" Publisher="CN=Maxime" Version="1.0.0.0" />
   <Properties>
-    <DisplayName>VoilaMonAvis(FromScratch)</DisplayName>
+    <DisplayName>VoilaMonAvisS</DisplayName>
     <PublisherDisplayName>Maxime</PublisherDisplayName>
     <Logo>Assets\VoilaMonAvis_LogoStore(blue).jpg</Logo>
   </Properties>
@@ -14,11 +14,14 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="VoilaMonAvis_FromScratch_.App">
-      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\VoilaMonAvis_Logo(blue).jpg" SmallLogo="Assets\VoilaMonAvis_SmallLogo(négatif).jpg" Description="VoilaMonAvis(FromScratch)" ForegroundText="light" BackgroundColor="#464646">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="VoilaMonAvis.App">
+      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\VoilaMonAvis_Logo(blue).jpg" SmallLogo="Assets\VoilaMonAvis_SmallLogo(blue).jpg" Description="Application du site VoilaMonAvi.fr" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" ShortName="Voila Mon Avis" />
         <SplashScreen Image="Assets\VoilaMonAvis_SplashScreen(blue).jpg" BackgroundColor="#1BA1E2" />
       </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

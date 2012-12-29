@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using VoilaMonAvis.Data;
+using VoilaMonAvis.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -15,12 +15,12 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour en savoir plus sur le modèle d'élément Page Éléments groupés, consultez la page http://go.microsoft.com/fwlink/?LinkId=234231
 
-namespace VoilaMonAvis_FromScratch_
+namespace VoilaMonAvis
 {
     /// <summary>
     /// Page affichant une collection groupée d'éléments.
     /// </summary>
-    public sealed partial class GroupedItemsPage : VoilaMonAvis_FromScratch_.Common.LayoutAwarePage
+    public sealed partial class GroupedItemsPage : VoilaMonAvis.Common.LayoutAwarePage
     {
         public GroupedItemsPage()
         {

@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
-using VoilaMonAvis.Data;
 using VoilaMonAvis.DataAccessLayer;
+using VoilaMonAvis.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -18,13 +18,13 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour en savoir plus sur le modèle d'élément Page Détail du groupe, consultez la page http://go.microsoft.com/fwlink/?LinkId=234229
 
-namespace VoilaMonAvis_FromScratch_
+namespace VoilaMonAvis
 {
     /// <summary>
     /// Page affichant une vue d'ensemble d'un groupe, ainsi qu'un aperçu des éléments
     /// qu'il contient.
     /// </summary>
-    public sealed partial class GroupDetailPage : VoilaMonAvis_FromScratch_.Common.LayoutAwarePage
+    public sealed partial class GroupDetailPage : VoilaMonAvis.Common.LayoutAwarePage
     {
         public string idGroup = "";
         public PostDataGroup group = null;

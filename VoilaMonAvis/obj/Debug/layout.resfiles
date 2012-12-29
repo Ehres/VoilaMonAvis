@@ -17,4 +17,5 @@ Common\StandardStyles.xaml
 GroupDetailPage.xaml
 GroupedItemsPage.xaml
 ItemDetailPage.xaml
+SearchItemsPage.xaml
 Common\ReadMe.txt

@@ -11,7 +11,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 
-namespace VoilaMonAvis_FromScratch_.Common
+namespace VoilaMonAvis.Common
 {
     /// <summary>
     /// Convertisseur de valeur qui convertit true en <see cref="Visibility.Visible"/> et false en

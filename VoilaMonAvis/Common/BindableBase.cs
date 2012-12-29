@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml.Data;
 
-namespace VoilaMonAvis_FromScratch_.Common
+namespace VoilaMonAvis.Common
 {
     /// <summary>
     /// Implémentation de <see cref="INotifyPropertyChanged"/> pour simplifier les modèles.

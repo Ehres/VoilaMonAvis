@@ -9,7 +9,7 @@
 
 
 
-namespace VoilaMonAvis_FromScratch_
+namespace VoilaMonAvis
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
@@ -112,15 +112,17 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
             }
         }
 
-        private object Activate_0_LayoutAwarePage() { return new global::VoilaMonAvis_FromScratch_.Common.LayoutAwarePage(); }
+        private object Activate_0_LayoutAwarePage() { return new global::VoilaMonAvis.Common.LayoutAwarePage(); }
 
-        private object Activate_1_GroupDetailPage() { return new global::VoilaMonAvis_FromScratch_.GroupDetailPage(); }
+        private object Activate_1_GroupDetailPage() { return new global::VoilaMonAvis.GroupDetailPage(); }
 
-        private object Activate_2_GroupedItemsPage() { return new global::VoilaMonAvis_FromScratch_.GroupedItemsPage(); }
+        private object Activate_2_GroupedItemsPage() { return new global::VoilaMonAvis.GroupedItemsPage(); }
 
-        private object Activate_3_RichTextColumns() { return new global::VoilaMonAvis_FromScratch_.Common.RichTextColumns(); }
+        private object Activate_3_RichTextColumns() { return new global::VoilaMonAvis.Common.RichTextColumns(); }
 
-        private object Activate_4_ItemDetailPage() { return new global::VoilaMonAvis_FromScratch_.ItemDetailPage(); }
+        private object Activate_4_ItemDetailPage() { return new global::VoilaMonAvis.ItemDetailPage(); }
+
+        private object Activate_5_SearchItemsPage() { return new global::VoilaMonAvis.SearchItemsPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -150,36 +152,42 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
                 xamlType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.DataTemplate));
                 break;
 
-            case "VoilaMonAvis_FromScratch_.Common.LayoutAwarePage":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis_FromScratch_.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+            case "VoilaMonAvis.Common.LayoutAwarePage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
-            case "VoilaMonAvis_FromScratch_.GroupDetailPage":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis_FromScratch_.GroupDetailPage), GetXamlTypeByName("VoilaMonAvis_FromScratch_.Common.LayoutAwarePage"));
+            case "VoilaMonAvis.GroupDetailPage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.GroupDetailPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
                 userType.Activator = Activate_1_GroupDetailPage;
                 xamlType = userType;
                 break;
 
-            case "VoilaMonAvis_FromScratch_.GroupedItemsPage":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis_FromScratch_.GroupedItemsPage), GetXamlTypeByName("VoilaMonAvis_FromScratch_.Common.LayoutAwarePage"));
+            case "VoilaMonAvis.GroupedItemsPage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.GroupedItemsPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
                 userType.Activator = Activate_2_GroupedItemsPage;
                 xamlType = userType;
                 break;
 
-            case "VoilaMonAvis_FromScratch_.Common.RichTextColumns":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis_FromScratch_.Common.RichTextColumns), GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
+            case "VoilaMonAvis.Common.RichTextColumns":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.Common.RichTextColumns), GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
                 userType.Activator = Activate_3_RichTextColumns;
-                userType.SetContentPropertyName("VoilaMonAvis_FromScratch_.Common.RichTextColumns.RichTextContent");
+                userType.SetContentPropertyName("VoilaMonAvis.Common.RichTextColumns.RichTextContent");
                 userType.AddMemberName("RichTextContent");
                 userType.AddMemberName("ColumnTemplate");
                 xamlType = userType;
                 break;
 
-            case "VoilaMonAvis_FromScratch_.ItemDetailPage":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis_FromScratch_.ItemDetailPage), GetXamlTypeByName("VoilaMonAvis_FromScratch_.Common.LayoutAwarePage"));
+            case "VoilaMonAvis.ItemDetailPage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.ItemDetailPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
                 userType.Activator = Activate_4_ItemDetailPage;
+                xamlType = userType;
+                break;
+
+            case "VoilaMonAvis.SearchItemsPage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.SearchItemsPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
+                userType.Activator = Activate_5_SearchItemsPage;
                 xamlType = userType;
                 break;
 
@@ -190,22 +198,22 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
 
         private object get_0_RichTextColumns_RichTextContent(object instance)
         {
-            var that = (global::VoilaMonAvis_FromScratch_.Common.RichTextColumns)instance;
+            var that = (global::VoilaMonAvis.Common.RichTextColumns)instance;
             return that.RichTextContent;
         }
         private void set_0_RichTextColumns_RichTextContent(object instance, object Value)
         {
-            var that = (global::VoilaMonAvis_FromScratch_.Common.RichTextColumns)instance;
+            var that = (global::VoilaMonAvis.Common.RichTextColumns)instance;
             that.RichTextContent = (global::Windows.UI.Xaml.Controls.RichTextBlock)Value;
         }
         private object get_1_RichTextColumns_ColumnTemplate(object instance)
         {
-            var that = (global::VoilaMonAvis_FromScratch_.Common.RichTextColumns)instance;
+            var that = (global::VoilaMonAvis.Common.RichTextColumns)instance;
             return that.ColumnTemplate;
         }
         private void set_1_RichTextColumns_ColumnTemplate(object instance, object Value)
         {
-            var that = (global::VoilaMonAvis_FromScratch_.Common.RichTextColumns)instance;
+            var that = (global::VoilaMonAvis.Common.RichTextColumns)instance;
             that.ColumnTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
 
@@ -216,15 +224,15 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "VoilaMonAvis_FromScratch_.Common.RichTextColumns.RichTextContent":
-                userType = (global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VoilaMonAvis_FromScratch_.Common.RichTextColumns");
+            case "VoilaMonAvis.Common.RichTextColumns.RichTextContent":
+                userType = (global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VoilaMonAvis.Common.RichTextColumns");
                 xamlMember = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlMember(this, "RichTextContent", "Windows.UI.Xaml.Controls.RichTextBlock");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_0_RichTextColumns_RichTextContent;
                 xamlMember.Setter = set_0_RichTextColumns_RichTextContent;
                 break;
-            case "VoilaMonAvis_FromScratch_.Common.RichTextColumns.ColumnTemplate":
-                userType = (global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VoilaMonAvis_FromScratch_.Common.RichTextColumns");
+            case "VoilaMonAvis.Common.RichTextColumns.ColumnTemplate":
+                userType = (global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType)GetXamlTypeByName("VoilaMonAvis.Common.RichTextColumns");
                 xamlMember = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlMember(this, "ColumnTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_1_RichTextColumns_ColumnTemplate;

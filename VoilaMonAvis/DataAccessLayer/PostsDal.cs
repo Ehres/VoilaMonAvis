@@ -7,8 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using VoilaMonAvis.Data;
-using VoilaMonAvis_FromScratch_.DataModel;
+using VoilaMonAvis.DataModel;
 
 namespace VoilaMonAvis.DataAccessLayer
 {

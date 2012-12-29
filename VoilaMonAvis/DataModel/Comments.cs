@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VoilaMonAvis_FromScratch_.DataModel;
+using VoilaMonAvis.DataModel;
 
-namespace VoilaMonAvis.Data
+namespace VoilaMonAvis.DataModel
 {
     public class Comments
     {
