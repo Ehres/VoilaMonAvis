@@ -1,1 +1,1 @@
-C:\project\VMA\VoilaMonAvis\VoilaMonAvis\VoilaMonAvis.csproj;neutral
+E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\VoilaMonAvis.csproj;neutral

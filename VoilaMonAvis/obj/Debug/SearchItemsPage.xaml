@@ -48,6 +48,8 @@
                                           
             Background="#1BA1E2"/>
 
+        <TextBlock x:Name="noItemFound" Visibility="Collapsed" MinWidth="200" Height="50" FontSize="35" Margin="44,125,-44,593" Grid.RowSpan="2"/>
+        
         <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
         <ListView x:ConnectionId='2'
             x:Name="itemListView"
@@ -66,6 +68,7 @@
                                           
             Background="#1BA1E2"/>
 
+
         <!-- Bouton Précédent et titre de la page -->
         <Grid>
             <Grid.ColumnDefinitions>
@@ -73,7 +76,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>            
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

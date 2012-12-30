@@ -9,7 +9,6 @@ using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -46,7 +45,14 @@ namespace VoilaMonAvis
         private async void FindItem(string query)
         {
             List<PostDataItem> posts = await PostDataSource.Find(query);
-            this.DefaultViewModel["Items"] = posts;
+
+            if (posts.Count() > 0)            
+                this.DefaultViewModel["Items"] = posts;
+            else
+            {
+                noItemFound.Text = "Aucun résultat n'as été trouvé pour \"" + query + "\".";
+                noItemFound.Visibility = Visibility.Visible;
+            }            
         }
 
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)

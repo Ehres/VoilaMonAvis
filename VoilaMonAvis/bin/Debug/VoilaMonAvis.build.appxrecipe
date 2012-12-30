@@ -1,98 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>WIN-2TB0D36AHBT</Machine>
-    <WindowsUser>Maxime Grébauval</WindowsUser>
+    <Machine>EHRES</Machine>
+    <WindowsUser>Maxime</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
       <PackagePath>VoilaMonAvis.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
       <PackagePath>VoilaMonAvis.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\Logo.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\Logo.jpg">
       <PackagePath>Assets\Logo.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.jpg">
       <PackagePath>Assets\SplashScreen.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\SmallLogo.jpg">
       <PackagePath>Assets\SmallLogo.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-140.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-140.jpg">
       <PackagePath>Assets\SplashScreen.scale-140.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-180.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\SplashScreen.scale-180.jpg">
       <PackagePath>Assets\SplashScreen.scale-180.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\StoreLogo.jpg">
       <PackagePath>Assets\StoreLogo.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_Logo%28blue%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_Logo%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_Logo%28blue%29.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_Logo%28negatif%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_Logo%28negatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_Logo%28negatif%29.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LogoStore%28blue%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LogoStore%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_LogoStore%28blue%29.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
       <PackagePath>SearchItemsPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\project\VMA\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

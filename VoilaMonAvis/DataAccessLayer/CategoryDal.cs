@@ -29,5 +29,12 @@ namespace VoilaMonAvis.DataAccessLayer
 
             return GetListCategoriesByJson(json);
         }
+
+        public async static Task<List<Category>> GetMainCategories()
+        {
+            List<Category> categories = await GetAllCategories();
+            categories = categories.Where(c => c.Category_Title == "Cinéma" || c.Category_Title == "Musique" || c.Category_Title == "Spectacle" || c.Category_Title == "Divers" || c.Category_Title == "Chronique Littéraire").OrderByDescending(c=>c.Category_Post_Count).ToList();
+            return categories;
+        }
     }
 }

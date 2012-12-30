@@ -261,7 +261,8 @@ namespace VoilaMonAvis.DataModel
             #endregion
 
             #region All Categories and posts
-            List<Category> Categories = await CategoryDal.GetAllCategories();
+            //List<Category> Categories = await CategoryDal.GetAllCategories();
+            List<Category> Categories = await CategoryDal.GetMainCategories();
 
             foreach (Category category in Categories)
             {
@@ -380,7 +381,10 @@ namespace VoilaMonAvis.DataModel
                     items.Add(pdi);
                 
             }
-
+            if (items == null)
+                items = new List<PostDataItem>();
+                
+            
             return items;            
         }
     }
