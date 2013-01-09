@@ -72,7 +72,8 @@ namespace VoilaMonAvis
 
         private void HyperLinkHomeAppBar_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            HyperLinkHomeAppBar.Foreground = new SolidColorBrush(Windows.UI.Colors.AliceBlue);
+            HyperLinkHomeAppBar.Opacity = 0.8;
+            //HyperLinkHomeAppBar.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
         }
     }
 }

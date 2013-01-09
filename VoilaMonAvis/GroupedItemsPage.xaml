@@ -32,7 +32,36 @@
             <Setter Property="FontFamily" Value="Segoe UI" />
             <Setter Property="FontSize" Value="20" />
             <Setter Property="FontWeight" Value="SemiLight" />
-            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="HyperlinkButton">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.5"
+                                            Storyboard.TargetName="content"
+                                            Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)"
+                                            To="White" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0:0:0.5"
+                                            Storyboard.TargetName="content"
+                                            Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)"
+                                            To="White" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentControl x:Name="content" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                        Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Page.Resources>
 
@@ -45,7 +74,9 @@
         <AppBar IsOpen="False" IsSticky="True" Background="#1a8ae0">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <HyperlinkButton x:Name="HyperLinkHomeAppBar" Click="ButtonReturnHome_Click" Style="{StaticResource HomeAppBarButtonStyle }" PointerMoved="HyperLinkHomeAppBar_PointerMoved">Accueil</HyperlinkButton>
+                    <HyperlinkButton x:Name="HyperLinkHomeAppBar" Click="ButtonReturnHome_Click" Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil">
+                        
+                    </HyperlinkButton>
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -188,6 +219,12 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemGridView" Storyboard.TargetProperty="Visibility">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
                         </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="MouseOver">
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetName="HyperLinkButton" 
+                            Storyboard.TargetProperty="Color" To="Red" />
                     </Storyboard>
                 </VisualState>
             </VisualStateGroup>
