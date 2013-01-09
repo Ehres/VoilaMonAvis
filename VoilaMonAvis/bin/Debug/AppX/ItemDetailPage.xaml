@@ -27,6 +27,17 @@
         * La ligne 0 qui contient le bouton Précédent et le titre de la page
         * La ligne 1 qui contient le reste de la page
     -->
+
+
+    <Page.TopAppBar>
+        <AppBar IsOpen="False" IsSticky="True">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton x:ConnectionId='1'                               >Accueil</HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid
         Style="{StaticResource LayoutRootStyle}"
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}">
@@ -65,7 +76,7 @@
                         UserControl est choisi comme modèle d'élément, car il prend en charge la gestion des états visuels
                         Les événements chargés/déchargés s'abonnent explicitement pour afficher les mises à jour d'états d'affichage à partir de la page
                     -->
-                    <UserControl x:ConnectionId='2'                                                         >
+                    <UserControl x:ConnectionId='3'                                                         >
                         <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
 
                             <!-- Le contenu est autorisé à se trouver dans autant de colonnes que nécessaire -->
@@ -161,7 +172,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='2' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 

@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
       <PackagePath>VoilaMonAvis.exe</PackagePath>
-      <Modified>2012-12-30T18:45:55.688</Modified>
+      <Modified>2013-01-09T15:49:14.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
       <PackagePath>VoilaMonAvis.pdb</PackagePath>
-      <Modified>2012-12-30T18:45:55.654</Modified>
+      <Modified>2013-01-09T15:49:14.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-12-29T21:39:34.659</Modified>
+      <Modified>2013-01-09T15:22:13.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -110,19 +110,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
-      <Modified>2012-12-29T21:39:34.760</Modified>
+      <Modified>2013-01-09T12:30:32.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
-      <Modified>2012-12-29T21:39:34.765</Modified>
+      <Modified>2013-01-09T15:43:53.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
-      <Modified>2012-12-29T21:39:34.770</Modified>
+      <Modified>2013-01-09T12:31:50.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
       <PackagePath>SearchItemsPage.xaml</PackagePath>
-      <Modified>2012-12-30T18:09:13.428</Modified>
+      <Modified>2013-01-09T12:32:02.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SkyDrive\Projects\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

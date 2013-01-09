@@ -26,6 +26,17 @@
         * La ligne 0 qui contient le bouton Précédent et le titre de la page
         * La ligne 1 qui contient le reste de la page
     -->
+
+
+    <Page.TopAppBar>
+        <AppBar IsOpen="False" IsSticky="True">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton Click="ButtonReturnHome_Click">Accueil</HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>

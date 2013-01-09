@@ -58,5 +58,11 @@ namespace VoilaMonAvis
             this.DefaultViewModel["Items"] = items;
             this.flipView.SelectedItem = item;            
         }
+
+
+        void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GroupedItemsPage), "AllGroups");
+        }
     }
 }

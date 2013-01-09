@@ -39,7 +39,7 @@ namespace VoilaMonAvis
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             var postDataGroups = PostDataSource.GetGroups((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = postDataGroups;     
+            this.DefaultViewModel["Groups"] = postDataGroups;  
         }
 
         void Header_Click(object sender, RoutedEventArgs e)
@@ -58,6 +58,21 @@ namespace VoilaMonAvis
             // en transmettant les informations requises en tant que paramètre de navigation.
             var itemId = ((PostDataItem)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(ItemDetailPage), itemId);
+        }
+
+        void AppBar_Open(object sender, object e)
+        {
+
+        }
+
+        void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GroupedItemsPage), "AllGroups");
+        }
+
+        private void HyperLinkHomeAppBar_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            HyperLinkHomeAppBar.Foreground = new SolidColorBrush(Windows.UI.Colors.AliceBlue);
         }
     }
 }

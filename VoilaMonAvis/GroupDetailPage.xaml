@@ -18,6 +18,12 @@
             Source="{Binding Items}"
             d:Source="{Binding AllGroups[0].Items, Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}"/>
         <x:String x:Key="AppName">Voila Mon Avis - Articles par catégories</x:String>
+
+        <Style x:Key="HomeAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
+            <Setter Property="AutomationProperties.AutomationId" Value="HomeAppBarButton"/>
+            <Setter Property="AutomationProperties.Name" Value=""/>
+            <Setter Property="Content" Value="Accueil"/>
+        </Style>
     </Page.Resources>
 
     <!--
@@ -25,6 +31,16 @@
         * La ligne 0 qui contient le bouton Précédent et le titre de la page
         * La ligne 1 qui contient le reste de la page
     -->
+
+    <Page.TopAppBar>
+        <AppBar IsOpen="False" IsSticky="True">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton Click="ButtonReturnHome_Click">Accueil</HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid
         Style="{StaticResource LayoutRootStyle}"
         DataContext="{Binding Group}"

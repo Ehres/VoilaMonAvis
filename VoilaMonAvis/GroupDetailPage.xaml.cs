@@ -74,6 +74,13 @@ namespace VoilaMonAvis
             // en transmettant les informations requises en tant que paramètre de navigation.
             var itemId = ((PostDataItem)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(ItemDetailPage), itemId);
-        }       
+        }
+
+
+
+        void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GroupedItemsPage), "AllGroups");
+        }
     }
 }

@@ -25,6 +25,14 @@
             d:Source="{Binding AllGroups, Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}"/>
 
     <x:String x:Key="AppName">Voila Mon Avis</x:String>
+
+
+        <Style x:Key="HomeAppBarButtonStyle" TargetType="HyperlinkButton">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="SemiLight" />
+        </Style>
     </Page.Resources>
 
     <!--
@@ -32,6 +40,15 @@
         * La ligne 0 qui contient le bouton Précédent et le titre de la page
         * La ligne 1 qui contient le reste de la page
     -->
+    <Page.TopAppBar>
+        <AppBar IsOpen="False" IsSticky="True" Background="#1a8ae0">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton x:ConnectionId='1' x:Name="HyperLinkHomeAppBar"                                Style="{StaticResource HomeAppBarButtonStyle }"                                                >Accueil</HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -39,7 +56,7 @@
         </Grid.RowDefinitions>
         
         <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
-        <GridView x:ConnectionId='1'
+        <GridView x:ConnectionId='2'
             x:Name="itemGridView"
             AutomationProperties.AutomationId="ItemGridView"
             AutomationProperties.Name="Grouped Items"
@@ -63,7 +80,7 @@
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
                             <Grid Margin="1,0,0,6">
-                                <Button x:ConnectionId='5'
+                                <Button x:ConnectionId='6'
                                     AutomationProperties.Name="Group Title"
                                                         
                                     Style="{StaticResource TextPrimaryButtonStyle}" >
@@ -85,7 +102,7 @@
         </GridView>
 
         <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
-        <ListView x:ConnectionId='2'
+        <ListView x:ConnectionId='3'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemListView"
             AutomationProperties.Name="Grouped Items"
@@ -105,7 +122,7 @@
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
                             <Grid Margin="7,7,0,0">
-                                <Button x:ConnectionId='4'
+                                <Button x:ConnectionId='5'
                                     AutomationProperties.Name="Group Title"
                                                         
                                     Style="{StaticResource TextPrimaryButtonStyle}">
@@ -127,7 +144,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Grid.Column="1" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="0,0,883,40"/>
         </Grid>
 

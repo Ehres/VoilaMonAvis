@@ -26,6 +26,17 @@
         * La ligne 0 qui contient le bouton Précédent et le titre de la page
         * La ligne 1 qui contient le reste de la page
     -->
+
+
+    <Page.TopAppBar>
+        <AppBar IsOpen="False" IsSticky="True">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <HyperlinkButton x:ConnectionId='1'                               >Accueil</HyperlinkButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -33,7 +44,7 @@
         </Grid.RowDefinitions>
 
         <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
-        <GridView x:ConnectionId='1'
+        <GridView x:ConnectionId='2'
             x:Name="itemGridView"
             AutomationProperties.AutomationId="ItemsGridView"
             AutomationProperties.Name="Items"
@@ -51,7 +62,7 @@
         <TextBlock x:Name="noItemFound" Visibility="Collapsed" MinWidth="200" Height="50" FontSize="35" Margin="44,125,-44,593" Grid.RowSpan="2"/>
         
         <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
-        <ListView x:ConnectionId='2'
+        <ListView x:ConnectionId='3'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
@@ -75,7 +86,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>            
         </Grid>
 

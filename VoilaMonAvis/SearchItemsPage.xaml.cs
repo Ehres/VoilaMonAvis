@@ -60,5 +60,12 @@ namespace VoilaMonAvis
             var itemId = ((PostDataItem)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(ItemDetailPage), itemId);
         }
+
+
+
+        void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GroupedItemsPage), "AllGroups");
+        }
     }
 }
