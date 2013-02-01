@@ -106,6 +106,7 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\BooleanNegationConverter.cs" />
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\ParallaxConverter.cs" />
     <Compile Include="DataAccessLayer\CategoryDal.cs" />
     <Compile Include="DataAccessLayer\Config.cs" />
     <Compile Include="DataAccessLayer\JsonDal.cs" />
@@ -152,6 +153,7 @@
     <None Include="VoilaMonAvis(FromScratch)_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\fondbulle.png" />
     <Content Include="Assets\Logo.jpg" />
     <Content Include="Assets\SplashScreen.jpg" />
     <Content Include="Assets\SmallLogo.jpg" />
@@ -197,6 +199,9 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ParallaxBackgroundLibrary">
+      <HintPath>..\packages\ParallaxBackground.1.0.1\lib\winrt45\ParallaxBackgroundLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

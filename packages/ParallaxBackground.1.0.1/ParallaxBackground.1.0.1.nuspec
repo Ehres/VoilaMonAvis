@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ParallaxBackground</id>
+    <version>1.0.1</version>
+    <title>ParallaxBackground</title>
+    <authors>JohnMichaelHauck</authors>
+    <owners>JohnMichaelHauck</owners>
+    <projectUrl>http://parallaxbackground.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Metro moving background</description>
+    <summary>http://w8isms.blogspot.com/2012/09/parallax-background-in-xaml-revisited.html</summary>
+    <releaseNotes>Added a converter parameter and enhanced the demo to show trees.</releaseNotes>
+    <copyright>John Michael Hauck</copyright>
+    <tags>Parallax Background C# WinRt XAML</tags>
+    <references>
+      <reference file="ParallaxBackgroundLibrary.dll" />
+    </references>
+  </metadata>
+</package>

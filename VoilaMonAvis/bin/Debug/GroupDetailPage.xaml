@@ -9,6 +9,7 @@
     xmlns:data="using:VoilaMonAvis.DataModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pbl="using:ParallaxBackgroundLibrary" 
     mc:Ignorable="d">
     <Page.Resources>
 
@@ -18,12 +19,8 @@
             Source="{Binding Items}"
             d:Source="{Binding AllGroups[0].Items, Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}"/>
         <x:String x:Key="AppName">Voila Mon Avis - Articles par catégories</x:String>
+        <pbl:ParallaxConverter x:Key="ParallaxConverter" />
 
-        <Style x:Key="HomeAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource AppBarButtonStyle}">
-            <Setter Property="AutomationProperties.AutomationId" Value="HomeAppBarButton"/>
-            <Setter Property="AutomationProperties.Name" Value=""/>
-            <Setter Property="Content" Value="Accueil"/>
-        </Style>
     </Page.Resources>
 
     <!--
@@ -33,72 +30,85 @@
     -->
 
     <Page.TopAppBar>
-        <AppBar IsOpen="False" IsSticky="True">
+        <AppBar IsOpen="False" IsSticky="True" Background="#1a8ae0">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <HyperlinkButton x:ConnectionId='1'                               >Accueil</HyperlinkButton>
+                    <HyperlinkButton x:ConnectionId='1' x:Name="HyperLinkHomeAppBar"                                Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil">
+
+                    </HyperlinkButton>
                 </StackPanel>
             </Grid>
         </AppBar>
     </Page.TopAppBar>
+
     <Grid
         Style="{StaticResource LayoutRootStyle}"
         DataContext="{Binding Group}"
-        d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}">
+        d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}" Background="#FF1BA1E2">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <ProgressBar x:Name="progressBarAllItemLoaded" IsIndeterminate="True" Margin="0,0,0,134" Style="{Binding ProgressBarIndeterminateForegroundThemeBrush}"/>
+        <Grid Grid.RowSpan="2">
+            <StackPanel VerticalAlignment="Bottom">
+                <StackPanel.RenderTransform>
+                    <CompositeTransform
+                    TranslateX="{Binding ElementName=MyScrollViewer, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}}" />
+                </StackPanel.RenderTransform>
+                <Image NineGrid="0" Margin="0,333,0,0" Source="Assets/fondbulle.png" Stretch="UniformToFill" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <ScrollViewer
+            x:Name="MyScrollViewer"
+            HorizontalScrollMode="Enabled"
+            HorizontalScrollBarVisibility="Auto"
+            Grid.RowSpan="2">
+                <Grid Height="768">
+                    <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
+                    <GridView x:ConnectionId='3'
+                    x:Name="itemGridView"
+                    AutomationProperties.AutomationId="ItemGridView"            
+                    AutomationProperties.Name="Items In Group"
+                    TabIndex="1"
+                    Grid.RowSpan="2"
+                    Padding="120,126,120,50"
+                    ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+                    ItemTemplate="{StaticResource Standard500x130ItemTemplate}"
+                    SelectionMode="None"
+                    IsSwipeEnabled="false"
+                    IsItemClickEnabled="True"
+                                                  >
+                        <GridView.ItemContainerStyle>
+                            <Style TargetType="FrameworkElement">
+                                <Setter Property="Margin" Value="52,0,0,10"/>
+                            </Style>
+                        </GridView.ItemContainerStyle>
+                    </GridView>
 
-        <ProgressBar x:Name="progressBarAllItemLoaded" IsIndeterminate="True" Margin="0,0,0,134" ></ProgressBar>
-        
-        <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
-        <GridView x:ConnectionId='2'
-            x:Name="itemGridView"
-            AutomationProperties.AutomationId="ItemGridView"            
-            AutomationProperties.Name="Items In Group"
-            TabIndex="1"
-            Grid.RowSpan="2"
-            Padding="120,126,120,50"
-            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-            ItemTemplate="{StaticResource Standard500x130ItemTemplate}"
-            SelectionMode="None"
-            IsSwipeEnabled="false"
-            IsItemClickEnabled="True"
-                                          
-            Background="#1BA1E2">
-            <GridView.ItemContainerStyle>
-                <Style TargetType="FrameworkElement">
-                    <Setter Property="Margin" Value="52,0,0,10"/>
-                </Style>
-            </GridView.ItemContainerStyle>
-        </GridView>
+                    <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
+                    <ListView x:ConnectionId='4'
+                    x:Name="itemListView"
+                    AutomationProperties.AutomationId="ItemListView"
+                    AutomationProperties.Name="Items In Group"
+                    TabIndex="1"
+                    Grid.Row="1"
+                    Visibility="Collapsed"
+                    Padding="10,0,0,60"
+                    ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+                    ItemTemplate="{StaticResource Standard80ItemTemplate}"
+                    SelectionMode="None"
+                    IsSwipeEnabled="false"
+                    IsItemClickEnabled="True"
+                                                  >
 
-        <!-- Liste de défilement vertical utilisée uniquement lorsque l'état d'affichage a la valeur Snapped -->
-        <ListView x:ConnectionId='3'
-            x:Name="itemListView"
-            AutomationProperties.AutomationId="ItemListView"
-            AutomationProperties.Name="Items In Group"
-            TabIndex="1"
-            Grid.Row="1"
-            Visibility="Collapsed"
-            Padding="10,0,0,60"
-            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-            ItemTemplate="{StaticResource Standard80ItemTemplate}"
-            SelectionMode="None"
-            IsSwipeEnabled="false"
-            IsItemClickEnabled="True"
-                                          >
-
-            <ListView.Header>
-                <StackPanel>
-                    <!--<TextBlock Text="{Binding Subtitle}" Margin="10,0,18,20" Style="{StaticResource TitleTextStyle}" MaxHeight="60"/>-->
-                    <!--<Image Source="{Binding Image}" Margin="10,0,18,0" MaxHeight="160" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
-                    <!--<TextBlock Margin="10,20,18,30" Text="{Binding Description}" Style="{StaticResource BodyTextStyle}"/>-->
-                </StackPanel>
-            </ListView.Header>
-        </ListView>
+                        <ListView.Header>
+                            <StackPanel>
+                                <!--<TextBlock Text="{Binding Subtitle}" Margin="10,0,18,20" Style="{StaticResource TitleTextStyle}" MaxHeight="60"/>-->
+                                <!--<Image Source="{Binding Image}" Margin="10,0,18,0" MaxHeight="160" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
+                                <!--<TextBlock Margin="10,20,18,30" Text="{Binding Description}" Style="{StaticResource BodyTextStyle}"/>-->
+                            </StackPanel>
+                        </ListView.Header>
+                    </ListView>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
 
         <!-- Bouton Précédent et titre de la page -->
         <Grid>
@@ -106,10 +116,14 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='2' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <VisualStateManager.VisualStateGroups>
 
             <!-- Les états visuels reflètent l'état d'affichage de l'application -->

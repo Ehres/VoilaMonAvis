@@ -9,6 +9,7 @@
     xmlns:data="using:VoilaMonAvis.DataModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pbl="using:ParallaxBackgroundLibrary" 
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -20,6 +21,7 @@
             d:Source="{Binding AllGroups[0].Items, Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}"/>
 
         <x:String x:Key="AppName">Voila Mon Avis - Détails de l'article</x:String>
+        <pbl:ParallaxConverter x:Key="ParallaxConverter" />
     </Page.Resources>
 
     <!--
@@ -30,10 +32,12 @@
 
 
     <Page.TopAppBar>
-        <AppBar IsOpen="False" IsSticky="True">
+        <AppBar IsOpen="False" IsSticky="True" Background="#1a8ae0">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <HyperlinkButton Click="ButtonReturnHome_Click">Accueil</HyperlinkButton>
+                    <HyperlinkButton x:Name="HyperLinkHomeAppBar" Click="ButtonReturnHome_Click" Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil">
+
+                    </HyperlinkButton>
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -47,8 +51,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
-        
+
         <!--
             Le reste de la page n'est constitué que d'un grand FlipView affichant les détails
             d'un élément à la fois, et permettant à l'utilisateur de parcourir tous les éléments d'un groupe
@@ -77,88 +80,96 @@
                         Les événements chargés/déchargés s'abonnent explicitement pour afficher les mises à jour d'états d'affichage à partir de la page
                     -->
                     <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
-                        <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
+                        <Grid>
+                            <StackPanel VerticalAlignment="Bottom">
+                                <StackPanel.RenderTransform>
+                                    <CompositeTransform TranslateX="{Binding ElementName=scrollViewer, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}}" />
+                                </StackPanel.RenderTransform>
+                                <Image NineGrid="0" Margin="0,333,0,0" Source="Assets/fondbulle.png" Stretch="UniformToFill" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
 
-                            <!-- Le contenu est autorisé à se trouver dans autant de colonnes que nécessaire -->
-                            <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47">
-                                <RichTextBlock x:Name="richTextBlock" Width="560" Style="{StaticResource ItemRichTextStyle}" IsTextSelectionEnabled="False">
-                                    <Paragraph>
-                                        <Run FontSize="26.667" FontWeight="Light" Text="{Binding Title}"/>
-                                        <LineBreak/>
-                                        <LineBreak/>
-                                    </Paragraph>
-                                    <Paragraph LineStackingStrategy="MaxHeight">
-                                        <InlineUIContainer>
-                                            <Image x:Name="image" MaxHeight="480" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}" AutomationProperties.Name="{Binding Title}"/>
-                                        </InlineUIContainer>
-                                    </Paragraph>
-                                    <Paragraph LineStackingStrategy="MaxHeight">
-                                        <Run FontWeight="SemiLight" Text="{Binding Content}"/>                                                
-                                    </Paragraph>
-                                    <Paragraph LineStackingStrategy="MaxHeight">
-                                        <InlineUIContainer>                                                                                             
-                                            <WebView Source="{Binding VideoPath}" Width="560" Height="315"></WebView>                                            
-                                        </InlineUIContainer>
-                                    </Paragraph><!--
-                                    <Paragraph LineStackingStrategy="MaxHeight">
-                                        <Run FontWeight="SemiLight" Text="{Binding ContentNext}"/>
-                                    </Paragraph>-->
-                                </RichTextBlock>                                
+                                <!-- Le contenu est autorisé à se trouver dans autant de colonnes que nécessaire -->
+                                <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47" Background="White" Opacity="0.80">                                    
+                                    <RichTextBlock x:Name="richTextBlock" Width="560" Style="{StaticResource ItemRichTextStyle}" Foreground="Black" IsTextSelectionEnabled="False" Margin="10">
+                                        <Paragraph>
+                                            <Run FontSize="26.667" FontWeight="Light" Text="{Binding Title}"/>
+                                            <LineBreak/>
+                                            <LineBreak/>
+                                        </Paragraph>
+                                        <Paragraph LineStackingStrategy="MaxHeight">
+                                            <InlineUIContainer>
+                                                <Image x:Name="image" MaxHeight="480" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}" AutomationProperties.Name="{Binding Title}"/>
+                                            </InlineUIContainer>
+                                        </Paragraph>
+                                        <Paragraph LineStackingStrategy="MaxHeight">
+                                            <Run FontWeight="SemiLight" Text="{Binding Content}"/>                                                
+                                        </Paragraph>
+                                        <Paragraph LineStackingStrategy="MaxHeight">
+                                            <InlineUIContainer>                                                                                             
+                                                <WebView Source="{Binding VideoPath}" Width="560" Height="315"></WebView>                                            
+                                            </InlineUIContainer>
+                                        </Paragraph><!--
+                                        <Paragraph LineStackingStrategy="MaxHeight">
+                                            <Run FontWeight="SemiLight" Text="{Binding ContentNext}"/>
+                                        </Paragraph>-->
+                                    </RichTextBlock>                                
                                 
                                 
-                                <!-- Des colonnes supplémentaires sont créées à partir de ce modèle -->
-                                <common:RichTextColumns.ColumnTemplate>
-                                    <DataTemplate>
-                                        <RichTextBlockOverflow Width="560" Margin="80,0,0,0">
-                                            <RichTextBlockOverflow.RenderTransform>
-                                                <TranslateTransform X="-1" Y="4"/>
-                                            </RichTextBlockOverflow.RenderTransform>
-                                        </RichTextBlockOverflow>
-                                    </DataTemplate>
-                                </common:RichTextColumns.ColumnTemplate>
-                            </common:RichTextColumns>
+                                    <!-- Des colonnes supplémentaires sont créées à partir de ce modèle -->
+                                    <common:RichTextColumns.ColumnTemplate>
+                                        <DataTemplate>
+                                            <RichTextBlockOverflow Width="560" Margin="80,0,0,0">
+                                                <RichTextBlockOverflow.RenderTransform>
+                                                    <TranslateTransform X="-1" Y="4"/>
+                                                </RichTextBlockOverflow.RenderTransform>
+                                            </RichTextBlockOverflow>
+                                        </DataTemplate>
+                                    </common:RichTextColumns.ColumnTemplate>
+                                </common:RichTextColumns>
 
                             
                             
-                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateManager.VisualStateGroups>
 
-                                <!-- Les états visuels reflètent l'état d'affichage de l'application au sein du FlipView -->
-                                <VisualStateGroup x:Name="ApplicationViewStates">
-                                    <VisualState x:Name="FullScreenLandscape"/>
-                                    <VisualState x:Name="Filled"/>
+                                    <!-- Les états visuels reflètent l'état d'affichage de l'application au sein du FlipView -->
+                                    <VisualStateGroup x:Name="ApplicationViewStates">
+                                        <VisualState x:Name="FullScreenLandscape"/>
+                                        <VisualState x:Name="Filled"/>
 
-                                    <!-- Respecter la convention de marge étroite de 100 pixels pour le mode Portrait -->
-                                    <VisualState x:Name="FullScreenPortrait">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="97,0,87,57"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="400"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
+                                        <!-- Respecter la convention de marge étroite de 100 pixels pour le mode Portrait -->
+                                        <VisualState x:Name="FullScreenPortrait">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="97,0,87,57"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="400"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
 
-                                    <!-- Lorsque l'état d'affichage a la valeur Snapped, le contenu est reformaté et le défilement devient vertical -->
-                                    <VisualState x:Name="Snapped">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="17,0,17,57"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scrollViewer" Storyboard.TargetProperty="Style">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource VerticalScrollViewerStyle}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextBlock" Storyboard.TargetProperty="Width">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="280"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="160"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                        </ScrollViewer>
+                                        <!-- Lorsque l'état d'affichage a la valeur Snapped, le contenu est reformaté et le défilement devient vertical -->
+                                        <VisualState x:Name="Snapped">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="17,0,17,57"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scrollViewer" Storyboard.TargetProperty="Style">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource VerticalScrollViewerStyle}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextBlock" Storyboard.TargetProperty="Width">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="280"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="160"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </ScrollViewer>
+                        </Grid>
                     </UserControl>
                 </DataTemplate>
             </FlipView.ItemTemplate>

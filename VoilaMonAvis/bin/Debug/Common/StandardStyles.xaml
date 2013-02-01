@@ -1655,7 +1655,7 @@
 
     <!-- Modèle d'élément de 500 x 130 pixels convenant pour une grille, comme affiché dans le GroupDetailPage -->
     <DataTemplate x:Key="Standard500x130ItemTemplate">
-        <Grid Height="110" Width="480" Margin="10">
+        <Grid Height="110" Width="430" Margin="10" Background="#1a8ae0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -1664,7 +1664,7 @@
                 <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
             </Border>
             <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
-                <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
+                <TextBlock Text="{Binding Title}" TextWrapping="NoWrap" FontFamily="Segoe UI" FontWeight="Light" FontSize="15"/>
             </StackPanel>
         </Grid>
     </DataTemplate>
@@ -1813,6 +1813,43 @@
                 <TransitionCollection>
                     <EntranceThemeTransition/>
                 </TransitionCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="HomeAppBarButtonStyle" TargetType="HyperlinkButton">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontWeight" Value="SemiLight" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="HyperlinkButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.5"
+                                            Storyboard.TargetName="content"
+                                            Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)"
+                                            To="White" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.5"
+                                            Storyboard.TargetName="content"
+                                            Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)"
+                                            To="White" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ContentControl x:Name="content" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                        Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>

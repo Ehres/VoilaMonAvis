@@ -5,6 +5,7 @@ using System.Linq;
 using VoilaMonAvis.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -60,20 +61,14 @@ namespace VoilaMonAvis
             this.Frame.Navigate(typeof(ItemDetailPage), itemId);
         }
 
-        void AppBar_Open(object sender, object e)
-        {
-
-        }
-
         void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(GroupedItemsPage), "AllGroups");
         }
 
-        private void HyperLinkHomeAppBar_PointerMoved(object sender, PointerRoutedEventArgs e)
+        private void Grid_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            HyperLinkHomeAppBar.Opacity = 0.8;
-            //HyperLinkHomeAppBar.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
+            //customAnimation.Begin();
         }
     }
 }
