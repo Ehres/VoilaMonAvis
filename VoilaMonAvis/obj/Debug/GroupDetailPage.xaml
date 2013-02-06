@@ -75,6 +75,12 @@
                     IsSwipeEnabled="false"
                     IsItemClickEnabled="True"
                                                   >
+
+                        <GridView.ItemContainerTransitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition IsStaggeringEnabled="True" />
+                            </TransitionCollection>
+                        </GridView.ItemContainerTransitions>
                         <GridView.ItemContainerStyle>
                             <Style TargetType="FrameworkElement">
                                 <Setter Property="Margin" Value="52,0,0,10"/>

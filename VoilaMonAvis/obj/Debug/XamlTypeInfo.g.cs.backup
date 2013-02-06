@@ -114,9 +114,9 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
 
         private object Activate_0_LayoutAwarePage() { return new global::VoilaMonAvis.Common.LayoutAwarePage(); }
 
-        private object Activate_1_GroupDetailPage() { return new global::VoilaMonAvis.GroupDetailPage(); }
+        private object Activate_1_ParallaxConverter() { return new global::ParallaxBackgroundLibrary.ParallaxConverter(); }
 
-        private object Activate_2_ParallaxConverter() { return new global::ParallaxBackgroundLibrary.ParallaxConverter(); }
+        private object Activate_2_GroupDetailPage() { return new global::VoilaMonAvis.GroupDetailPage(); }
 
         private object Activate_3_GroupedItemsPage() { return new global::VoilaMonAvis.GroupedItemsPage(); }
 
@@ -164,15 +164,15 @@ namespace VoilaMonAvis.VoilaMonAvis_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "VoilaMonAvis.GroupDetailPage":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.GroupDetailPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
-                userType.Activator = Activate_1_GroupDetailPage;
+            case "ParallaxBackgroundLibrary.ParallaxConverter":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::ParallaxBackgroundLibrary.ParallaxConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_1_ParallaxConverter;
                 xamlType = userType;
                 break;
 
-            case "ParallaxBackgroundLibrary.ParallaxConverter":
-                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::ParallaxBackgroundLibrary.ParallaxConverter), GetXamlTypeByName("Object"));
-                userType.Activator = Activate_2_ParallaxConverter;
+            case "VoilaMonAvis.GroupDetailPage":
+                userType = new global::VoilaMonAvis.VoilaMonAvis_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::VoilaMonAvis.GroupDetailPage), GetXamlTypeByName("VoilaMonAvis.Common.LayoutAwarePage"));
+                userType.Activator = Activate_2_GroupDetailPage;
                 xamlType = userType;
                 break;
 

@@ -68,7 +68,13 @@
                     SelectionMode="None"
                     IsSwipeEnabled="false"
                     IsItemClickEnabled="true"
-                                                  />
+                                                  >
+                        <GridView.ItemContainerTransitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition IsStaggeringEnabled="True" />
+                            </TransitionCollection>
+                        </GridView.ItemContainerTransitions>
+                    </GridView>
 
                     <TextBlock x:Name="noItemFound" Visibility="Collapsed" MinWidth="200" Height="50" FontSize="35" Margin="44,125,-44,593" Grid.RowSpan="2"/>
 

@@ -40,8 +40,7 @@
         <AppBar IsOpen="False" IsSticky="True" Background="#1a8ae0">
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <HyperlinkButton x:Name="HyperLinkHomeAppBar" Click="ButtonReturnHome_Click" Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil">
-
+                    <HyperlinkButton x:Name="HyperLinkHomeAppBar" Click="ButtonReturnHome_Click" Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil" IsEnabled="False">
                     </HyperlinkButton>
                 </StackPanel>
             </Grid>
@@ -78,7 +77,11 @@
                     IsSwipeEnabled="false"
                     IsItemClickEnabled="True"
                     ItemClick="ItemView_ItemClick">
-
+                        <GridView.ItemContainerTransitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition IsStaggeringEnabled="True" />
+                            </TransitionCollection>
+                        </GridView.ItemContainerTransitions>
                         <GridView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <VirtualizingStackPanel Orientation="Horizontal"/>

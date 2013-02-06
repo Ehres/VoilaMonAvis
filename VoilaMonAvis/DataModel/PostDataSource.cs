@@ -233,7 +233,7 @@ namespace VoilaMonAvis.DataModel
         }
 
         private async void GetAllCategoriesAsync(bool reload)
-        {            
+        {
             #region Recents posts
             if (!reload)
             {
@@ -262,6 +262,7 @@ namespace VoilaMonAvis.DataModel
 
             #region All Categories and posts
             //List<Category> Categories = await CategoryDal.GetAllCategories();
+            List<Task<List<Posts>>> tasks = new List<Task<List<Posts>>>();
             List<Category> Categories = await CategoryDal.GetMainCategories();
 
             foreach (Category category in Categories)
@@ -274,6 +275,9 @@ namespace VoilaMonAvis.DataModel
                         "Assets/DarkGray.png",
                         1);
                     List<Posts> posts = await PostsDal.GetPostsByCategory(category.Category_Id.ToString());
+                    tasks.Add(PostsDal.GetPostsByCategory(category.Category_Id.ToString()));
+                    
+                    
 
                     foreach (Posts post in posts)
                     {
