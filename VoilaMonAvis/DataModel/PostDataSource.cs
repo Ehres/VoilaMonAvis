@@ -223,7 +223,7 @@ namespace VoilaMonAvis.DataModel
         {
             // Une simple recherche linéaire est acceptable pour les petits groupes de données
             var matches = _postDataSource.AllGroups.SelectMany(group => group.Items).Where((item) => item.UniqueId.Equals(uniqueId));
-            if (matches.Count() == 1) return matches.First();
+            if (matches.Count() > 0) return matches.First();
             return null;
         }
 
@@ -295,9 +295,7 @@ namespace VoilaMonAvis.DataModel
                     this.AllGroups.Add(group);
                 }
             }     
-            #endregion       
-
-            
+            #endregion                   
         }
 
         private static bool bCancelGetMoreItemGroup = false;
@@ -365,9 +363,9 @@ namespace VoilaMonAvis.DataModel
                         "Assets/DarkGray.png",
                         1);
 
-                if (_postDataSource._allGroups.Where(g => g.UniqueId == group.UniqueId).Count() == 0)
-                    _postDataSource._allGroups.Add(group);
-                else
+                //if (_postDataSource._allGroups.Where(g => g.UniqueId == group.UniqueId).Count() == 0)
+                    //_postDataSource._allGroups.Add(group);
+                //else
                     group = GetGroup(post.Post_Categories.First().Category_Id.ToString());
 
                 string content = WebUtility.HtmlDecode(Regex.Replace(post.Post_Content, @"<[^>]*>", String.Empty));
@@ -379,16 +377,14 @@ namespace VoilaMonAvis.DataModel
                                 group,
                                 post.Post_Video_Url,
                                 1);
-                group.Items.Add(pdi);
+                //group.Items.Add(pdi);
 
                 if (!items.Contains(pdi))
-                    items.Add(pdi);
-                
+                    items.Add(pdi);                
             }
             if (items == null)
                 items = new List<PostDataItem>();
-                
-            
+                            
             return items;            
         }
     }

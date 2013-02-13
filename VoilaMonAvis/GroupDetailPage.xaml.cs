@@ -52,6 +52,8 @@ namespace VoilaMonAvis
             this.DefaultViewModel["Items"] = group.Items;
             idGroup = group.UniqueId;
 
+            pageTitle.Text += " " + group.Title;
+
             LoadMoreItemGroup((String)navigationParameter);
         }
 

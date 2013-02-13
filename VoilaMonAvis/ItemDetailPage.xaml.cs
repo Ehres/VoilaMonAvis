@@ -17,6 +17,9 @@ using Windows.Graphics.Display;
 using Windows.Storage.Pickers;
 using Windows.Storage;
 using VoilaMonAvis.DataModel;
+using VoilaMonAvis.DataAccessLayer;
+using System.Net;
+using System.Text.RegularExpressions;
 
 // Pour en savoir plus sur le modèle d'élément Page Détail de l'élément, consultez la page http://go.microsoft.com/fwlink/?LinkId=234232
 
@@ -50,15 +53,47 @@ namespace VoilaMonAvis
             
 
             var item = PostDataSource.GetItem((String)navigationParameter);
-            //this.DefaultViewModel["Group"] = item.Group;
-            this.DefaultViewModel["Items"] = item.Group.Items;
-            
-            System.Collections.ObjectModel.ObservableCollection<PostDataItem> items = new System.Collections.ObjectModel.ObservableCollection<PostDataItem>();
-            items.Add(item);
-            this.DefaultViewModel["Items"] = items;
-            this.flipView.SelectedItem = item;            
+            if (item == null)            
+                GetItem((String)navigationParameter);            
+            else
+            {
+                //this.DefaultViewModel["Group"] = item.Group;
+                this.DefaultViewModel["Items"] = item.Group.Items;
+
+                System.Collections.ObjectModel.ObservableCollection<PostDataItem> items = new System.Collections.ObjectModel.ObservableCollection<PostDataItem>();
+                items.Add(item);
+                this.DefaultViewModel["Items"] = items;
+                this.flipView.SelectedItem = item;
+            }           
         }
 
+        private async void FindItem(string query)
+        {
+            List<PostDataItem> posts = await PostDataSource.Find(query);
+
+            if (posts.Count() > 0)
+            {
+                this.DefaultViewModel["Items"] = posts;
+                this.flipView.SelectedItem = posts.First();
+            }
+        }
+
+        private async void GetItem(string id)
+        {
+            string group_id = id.Split('-').First();
+            string post_id = id.Split('-').Last();
+            var item = await PostsDal.GetPost(int.Parse(post_id));
+            string content = WebUtility.HtmlDecode(Regex.Replace(item.Post_Content, @"<[^>]*>", String.Empty));
+
+            PostDataItem pdi = new PostDataItem(item.ID.ToString(), item.Post_Title, item.Post_Image_Full_Url, content, PostDataSource.GetGroup(group_id), item.Post_Video_Url, 1);
+            //this.DefaultViewModel["Group"] = item.Group;
+            this.DefaultViewModel["Items"] = pdi.Group.Items;
+
+            System.Collections.ObjectModel.ObservableCollection<PostDataItem> items = new System.Collections.ObjectModel.ObservableCollection<PostDataItem>();
+            items.Add(pdi);
+            this.DefaultViewModel["Items"] = items;
+            this.flipView.SelectedItem = item;
+        }
 
         void ButtonReturnHome_Click(object sender, RoutedEventArgs e)
         {

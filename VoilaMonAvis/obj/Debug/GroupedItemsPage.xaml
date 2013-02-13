@@ -41,7 +41,6 @@
             <Grid>
                 <StackPanel Orientation="Horizontal">
                     <HyperlinkButton x:ConnectionId='1' x:Name="HyperLinkHomeAppBar"                                Style="{StaticResource HomeAppBarButtonStyle }" Content="Accueil" IsEnabled="False">
-
                     </HyperlinkButton>
                 </StackPanel>
             </Grid>

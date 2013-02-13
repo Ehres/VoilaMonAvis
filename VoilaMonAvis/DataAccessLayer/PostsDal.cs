@@ -30,8 +30,7 @@ namespace VoilaMonAvis.DataAccessLayer
         {
             JObject o = JObject.Parse(json.ToString());
 
-            return new Posts(o["posts"].First().ToString());
-
+            return new Posts(o["post"].ToString());
         }
 
 
