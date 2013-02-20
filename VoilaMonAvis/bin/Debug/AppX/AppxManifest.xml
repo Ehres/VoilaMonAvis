@@ -9,9 +9,9 @@
   -->
   <Identity Name="11bc213d-d8e0-4b8a-8723-df34f4d32e88" Publisher="CN=Maxime" Version="1.0.0.0" ProcessorArchitecture="neutral" />
   <Properties>
-    <DisplayName>VoilaMonAvisS</DisplayName>
-    <PublisherDisplayName>Maxime</PublisherDisplayName>
-    <Logo>Assets\VoilaMonAvis_LogoStore(blue).jpg</Logo>
+    <DisplayName>VoilaMonAvis</DisplayName>
+    <PublisherDisplayName>Maxime Grébauval</PublisherDisplayName>
+    <Logo>Assets\VoilaMonAvis_StockerLogo.jpg</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
@@ -22,9 +22,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="VoilaMonAvis.exe" EntryPoint="VoilaMonAvis.App">
-      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\VoilaMonAvis_Logo(blue).jpg" SmallLogo="Assets\VoilaMonAvis_SmallLogo(blue).jpg" Description="Application du site VoilaMonAvi.fr" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" ShortName="Voila Mon Avis" />
-        <SplashScreen Image="Assets\VoilaMonAvis_SplashScreen(blue).jpg" BackgroundColor="#1BA1E2" />
+      <VisualElements DisplayName="VoilaMonAvis" Logo="Assets\VoilaMonAvis_StandardLogo.jpg" SmallLogo="Assets\VoilaMonAvis_SmallLogo.jpg" Description="Application du site VoilaMonAvi.fr" ForegroundText="light" BackgroundColor="#1BA1E2">
+        <DefaultTile ShowName="allLogos" ShortName="Voilà Mon Avis" WideLogo="Assets\VoilaMonAvis_LargeLogo.jpg" />
+        <SplashScreen Image="Assets\VoilaMonAvis_SplashScreen.jpg" BackgroundColor="#1BA1E2" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />

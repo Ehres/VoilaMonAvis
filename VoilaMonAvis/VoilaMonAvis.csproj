@@ -155,20 +155,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\fondbulle.png" />
-    <Content Include="Assets\Logo.jpg" />
-    <Content Include="Assets\SplashScreen.jpg" />
-    <Content Include="Assets\SmallLogo.jpg" />
-    <Content Include="Assets\SplashScreen.scale-140.jpg" />
-    <Content Include="Assets\SplashScreen.scale-180.jpg" />
-    <Content Include="Assets\StoreLogo.jpg" />
-    <Content Include="Assets\VoilaMonAvis_Logo%28blue%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_Logo%28negatif%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_LogoStore%28blue%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_LogoStore%28négatif%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_SmallLogo%28blue%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_SmallLogo%28négatif%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_SplashScreen%28blue%29.jpg" />
-    <Content Include="Assets\VoilaMonAvis_SplashScreen%28négatif%29.jpg" />
+    <Content Include="Assets\VoilaMonAvis_BadgeLogo.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_BadgeLogo.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_BadgeLogo.scale-180.jpg" />
+    <Content Include="Assets\VoilaMonAvis_LargeLogo.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_LargeLogo.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_LargeLogo.scale-180.jpg" />
+    <Content Include="Assets\VoilaMonAvis_LargeLogo.scale-80.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.scale-180.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.scale-80.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.targetsize-16.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.targetsize-256.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.targetsize-32.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SmallLogo.targetsize-48.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SplashScreen.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SplashScreen.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_SplashScreen.scale-180.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StandardLogo.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StandardLogo.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StandardLogo.scale-180.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StandardLogo.scale-80.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StockerLogo.scale-100.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StockerLogo.scale-140.jpg" />
+    <Content Include="Assets\VoilaMonAvis_StockerLogo.scale-180.jpg" />
     <Content Include="Common\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +216,7 @@
       <HintPath>..\packages\ParallaxBackground.1.0.1\lib\winrt45\ParallaxBackgroundLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
