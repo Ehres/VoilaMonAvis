@@ -43,6 +43,7 @@
         </AppBar>
     </Page.TopAppBar>
     <Grid
+         Name="GridContainerContent"
         Style="{StaticResource LayoutRootStyle}"
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}">
 
@@ -80,14 +81,14 @@
                         Les événements chargés/déchargés s'abonnent explicitement pour afficher les mises à jour d'états d'affichage à partir de la page
                     -->
                     <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
-                        <Grid>
+                        <Grid Name="GridContainerContent">
                             <StackPanel VerticalAlignment="Bottom">
                                 <StackPanel.RenderTransform>
-                                    <CompositeTransform TranslateX="{Binding ElementName=scrollViewer, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}}" />
+                                    <CompositeTransform TranslateX="{Binding ElementName=MyScrollViewer, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}}" />
                                 </StackPanel.RenderTransform>
                                 <Image NineGrid="0" Margin="0,333,0,0" Source="Assets/fondbulle.png" Stretch="UniformToFill" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
                             </StackPanel>
-                            <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
+                            <ScrollViewer x:Name="MyScrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1" HorizontalScrollMode="Auto">
 
                                 <!-- Le contenu est autorisé à se trouver dans autant de colonnes que nécessaire -->
                                 <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47" Background="White" Opacity="0.80">                                    

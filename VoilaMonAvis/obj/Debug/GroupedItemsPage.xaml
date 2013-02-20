@@ -49,7 +49,7 @@
 
 
     <Grid x:Name="GridAll" Style="{StaticResource LayoutRootStyle}" Background="#FF1BA1E2">
-        <Grid Grid.RowSpan="2">
+        <Grid Grid.RowSpan="2" Name="GridContainerContent">
             <StackPanel
             VerticalAlignment="Bottom">
                 <StackPanel.RenderTransform>
@@ -59,24 +59,27 @@
                 <Image NineGrid="0" Margin="0,333,0,0" Source="Assets/fondbulle.png" Stretch="UniformToFill" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             </StackPanel>
             <ScrollViewer
-            x:Name="MyScrollViewer"
-            HorizontalScrollMode="Enabled"
-            HorizontalScrollBarVisibility="Auto"
-            Grid.RowSpan="2">
+                x:Name="MyScrollViewer"
+                HorizontalScrollMode="Auto"
+                HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Hidden"
+                Grid.RowSpan="2"
+                >
                 <Grid Height="768">
                     <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
                     <GridView x:ConnectionId='3'
-                    x:Name="itemGridView"
-                    AutomationProperties.AutomationId="ItemGridView"
-                    AutomationProperties.Name="Grouped Items"
-                    Grid.RowSpan="2"
-                    Padding="116,137,40,46"
-                    ItemsSource="{Binding Source={StaticResource groupedItemsViewSource}}"
-                    ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
-                    SelectionMode="None"
-                    IsSwipeEnabled="false"
-                    IsItemClickEnabled="True"
-                                                  >
+                        x:Name="itemGridView"
+                        AutomationProperties.AutomationId="ItemGridView"
+                        AutomationProperties.Name="Grouped Items"
+                        Grid.RowSpan="2"
+                        Padding="116,137,40,46"
+                        ItemsSource="{Binding Source={StaticResource groupedItemsViewSource}}"
+                        ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        IsItemClickEnabled="True"
+                                                      
+                        >
                         <GridView.ItemContainerTransitions>
                             <TransitionCollection>
                                 <EntranceThemeTransition IsStaggeringEnabled="True" />

@@ -42,7 +42,7 @@
         </AppBar>
     </Page.TopAppBar>
     <Grid Style="{StaticResource LayoutRootStyle}" Background="#1BA1E2">
-        <Grid>
+        <Grid  Name="GridContainerContent">
             <StackPanel VerticalAlignment="Bottom" Grid.RowSpan="2">
                 <StackPanel.RenderTransform>
                     <CompositeTransform TranslateX="{Binding ElementName=MyScrollViewer, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}}" />
@@ -51,7 +51,7 @@
             </StackPanel>
             <ScrollViewer
             x:Name="MyScrollViewer"
-            HorizontalScrollMode="Enabled"
+            HorizontalScrollMode="Auto"
             HorizontalScrollBarVisibility="Auto"
             Grid.RowSpan="2">
                 <Grid Height="768" >

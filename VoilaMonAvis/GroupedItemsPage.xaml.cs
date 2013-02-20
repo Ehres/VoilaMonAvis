@@ -39,8 +39,10 @@ namespace VoilaMonAvis
         /// antérieure. Null lors de la première visite de la page.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            GridContainerContent.AddHandler(PointerWheelChangedEvent, new PointerEventHandler(Bubble_PointerWheelChanged), true);
+
             var postDataGroups = PostDataSource.GetGroups((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = postDataGroups;  
+            this.DefaultViewModel["Groups"] = postDataGroups;
         }
 
         void Header_Click(object sender, RoutedEventArgs e)
@@ -69,6 +71,11 @@ namespace VoilaMonAvis
         private void Grid_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             //customAnimation.Begin();
+        }
+
+        private void Bubble_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
+        { // Could walk up the tree to find the next SV or just have a reference like here: 
+            MyScrollViewer.ScrollToHorizontalOffset(MyScrollViewer.HorizontalOffset - e.GetCurrentPoint(null).Properties.MouseWheelDelta);
         }
     }
 }

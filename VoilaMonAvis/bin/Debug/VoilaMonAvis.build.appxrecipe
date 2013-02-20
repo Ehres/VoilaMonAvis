@@ -1,155 +1,155 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>EHRES</Machine>
-    <WindowsUser>Maxime</WindowsUser>
+    <Machine>WIN-2TB0D36AHBT</Machine>
+    <WindowsUser>Maxime Grébauval</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.exe">
       <PackagePath>VoilaMonAvis.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\VoilaMonAvis.pdb">
       <PackagePath>VoilaMonAvis.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\packages\ParallaxBackground.1.0.1\lib\winrt45\ParallaxBackgroundLibrary.dll">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\packages\ParallaxBackground.1.0.1\lib\winrt45\ParallaxBackgroundLibrary.dll">
       <PackagePath>ParallaxBackgroundLibrary.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.xml">
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\fondbulle.png">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\fondbulle.png">
       <PackagePath>Assets\fondbulle.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_BadgeLogo.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_BadgeLogo.scale-140.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_BadgeLogo.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_BadgeLogo.scale-180.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_LargeLogo.scale-100.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_LargeLogo.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_LargeLogo.scale-180.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-80.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_LargeLogo.scale-80.jpg">
       <PackagePath>Assets\VoilaMonAvis_LargeLogo.scale-80.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.scale-100.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.scale-180.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-80.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.scale-80.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.scale-80.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-16.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-16.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.targetsize-16.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-256.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-256.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.targetsize-256.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-32.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-32.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.targetsize-32.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-48.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SmallLogo.targetsize-48.jpg">
       <PackagePath>Assets\VoilaMonAvis_SmallLogo.targetsize-48.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen.scale-100.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_SplashScreen.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_SplashScreen.scale-180.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_StandardLogo.scale-100.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_StandardLogo.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_StandardLogo.scale-180.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-80.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StandardLogo.scale-80.jpg">
       <PackagePath>Assets\VoilaMonAvis_StandardLogo.scale-80.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-100.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-100.jpg">
       <PackagePath>Assets\VoilaMonAvis_StockerLogo.scale-100.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-140.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-140.jpg">
       <PackagePath>Assets\VoilaMonAvis_StockerLogo.scale-140.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-180.jpg">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Assets\VoilaMonAvis_StockerLogo.scale-180.jpg">
       <PackagePath>Assets\VoilaMonAvis_StockerLogo.scale-180.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupDetailPage.xaml">
       <PackagePath>GroupDetailPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\GroupedItemsPage.xaml">
       <PackagePath>GroupedItemsPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\ItemDetailPage.xaml">
       <PackagePath>ItemDetailPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\SearchItemsPage.xaml">
       <PackagePath>SearchItemsPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

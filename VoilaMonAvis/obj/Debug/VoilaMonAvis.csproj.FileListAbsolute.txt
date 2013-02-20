@@ -218,3 +218,4 @@ C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\obj\Debug\resources.r
 C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\obj\Debug\pri.resfiles
 C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\obj\Debug\LanguageQualifiers.txt
 C:\Users\Maxime\Documents\GitHub\VoilaMonAvis\VoilaMonAvis\obj\Debug\ProjectArchitectures.txt
+C:\project\Github\VoilaMonAvis\VoilaMonAvis\bin\Debug\ParallaxBackgroundLibrary.dll

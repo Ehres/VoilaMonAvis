@@ -47,7 +47,7 @@
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:PostDataSource, IsDesignTimeCreatable=True}}" Background="#FF1BA1E2">
 
         <ProgressBar x:Name="progressBarAllItemLoaded" IsIndeterminate="True" Margin="0,0,0,134" Style="{Binding ProgressBarIndeterminateForegroundThemeBrush}"/>
-        <Grid Grid.RowSpan="2">
+        <Grid Grid.RowSpan="2" Name="GridContainerContent">
             <StackPanel VerticalAlignment="Bottom">
                 <StackPanel.RenderTransform>
                     <CompositeTransform
@@ -56,25 +56,25 @@
                 <Image NineGrid="0" Margin="0,333,0,0" Source="Assets/fondbulle.png" Stretch="UniformToFill" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             </StackPanel>
             <ScrollViewer
-            x:Name="MyScrollViewer"
-            HorizontalScrollMode="Enabled"
-            HorizontalScrollBarVisibility="Auto"
-            Grid.RowSpan="2">
+                x:Name="MyScrollViewer"
+                HorizontalScrollMode="Auto"
+                HorizontalScrollBarVisibility="Auto"
+                Grid.RowSpan="2">
                 <Grid Height="768">
                     <!-- Grille de défilement horizontal utilisée dans la plupart des états d'affichage -->
                     <GridView
-                    x:Name="itemGridView"
-                    AutomationProperties.AutomationId="ItemGridView"            
-                    AutomationProperties.Name="Items In Group"
-                    TabIndex="1"
-                    Grid.RowSpan="2"
-                    Padding="120,126,120,50"
-                    ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-                    ItemTemplate="{StaticResource Standard500x130ItemTemplate}"
-                    SelectionMode="None"
-                    IsSwipeEnabled="false"
-                    IsItemClickEnabled="True"
-                    ItemClick="ItemView_ItemClick">
+                        x:Name="itemGridView"
+                        AutomationProperties.AutomationId="ItemGridView"            
+                        AutomationProperties.Name="Items In Group"
+                        TabIndex="1"
+                        Grid.RowSpan="2"
+                        Padding="120,126,120,50"
+                        ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+                        ItemTemplate="{StaticResource Standard500x130ItemTemplate}"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        IsItemClickEnabled="True"
+                        ItemClick="ItemView_ItemClick">
 
                         <GridView.ItemContainerTransitions>
                             <TransitionCollection>
