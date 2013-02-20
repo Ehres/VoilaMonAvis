@@ -105,7 +105,7 @@
                                         <Paragraph LineStackingStrategy="MaxHeight">
                                             <Run FontWeight="SemiLight" Text="{Binding Content}"/>                                                
                                         </Paragraph>
-                                        <Paragraph LineStackingStrategy="MaxHeight">
+                                        <Paragraph LineStackingStrategy="MaxHeight" LineHeight="315">
                                             <InlineUIContainer>                                                                                             
                                                 <WebView Source="{Binding VideoPath}" Width="560" Height="315"></WebView>                                            
                                             </InlineUIContainer>
